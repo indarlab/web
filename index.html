@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INDARLAB · Ciencia del deporte e IA propia para el desarrollo del talento</title>
+  <meta name="description" content="INDARLAB analiza a cada deportista y a cada grupo, y estima el efecto del entrenamiento con motores estadísticos y de inteligencia artificial propios.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand" aria-label="INDARLAB, inicio">
+        <img src="assets/img/lauburu.svg" alt="" class="brand__symbol">
+        <span class="brand__name">INDAR<span class="grad">LAB</span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#para-quien">Para quién</a>
+        <a href="#plataforma">Plataforma</a>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#evidencia">Evidencia</a>
+        <a href="https://indarlab.onrender.com/" class="btn btn--small btn--ghost">Log in</a>
+        <a href="#contacto" class="btn btn--small">Solicitar una demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============ 1 · HERO ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Ciencia del deporte e IA propia para el desarrollo del talento</p>
+          <h1>Mide el efecto real del entrenamiento en <span class="grad">cada deportista</span></h1>
+          <p class="lead">INDARLAB analiza a cada deportista y a cada grupo, por categoría o por estado madurativo, y estima el efecto del entrenamiento con motores estadísticos y de inteligencia artificial propios. A partir de los datos que tu club ya genera.</p>
+          <div class="hero__ctas">
+            <a href="#contacto" class="btn">Solicitar una demo</a>
+            <a href="#para-quien" class="btn btn--ghost">Ver beneficios</a>
+          </div>
+        </div>
+
+        <!-- Maqueta interactiva de la plataforma (datos ficticios) -->
+        <div class="mock" aria-label="Ejemplos de la plataforma con datos ficticios">
+          <div class="mock__tabs" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="tab-ind" id="t-ind" class="is-active">Individual</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-grp" id="t-grp" tabindex="-1">Grupal</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-cor" id="t-cor" tabindex="-1">Correlaciones</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-nod" id="t-nod" tabindex="-1">Nodos</button>
+          </div>
+
+          <!-- Individual -->
+          <div class="mock__panel" role="tabpanel" id="tab-ind" aria-labelledby="t-ind">
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">Jugador 07 · Sub-16 · En pico de crecimiento</p>
+                <p class="mock__title">Efecto estimado del entrenamiento</p>
+              </div>
+              <span class="mock__pill">Ejemplo</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 96 C60 92 120 86 180 80 C240 74 280 70 320 66" fill="none" stroke="#9AA6B2" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>
+              <path d="M0 96 C60 88 120 72 180 58 C240 44 280 34 320 26" fill="none" stroke="#20B2A2" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M320 66 L320 26" stroke="#46C08B" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="320" cy="26" r="4.5" fill="#1D2D3D"/>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--obs"></i>Evolución observada</span>
+              <span><i class="lg lg--mat"></i>Esperado por su grupo madurativo</span>
+              <span><i class="lg lg--eff"></i>Efecto del entrenamiento</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--high"></span><span>Salto vertical</span><strong>+2,1 cm</strong><em>Efecto alto</em></li>
+              <li><span class="dot dot--mid"></span><span>Sprint 20 m</span><strong>−0,03 s</strong><em>Efecto moderado</em></li>
+              <li><span class="dot dot--low"></span><span>Fuerza</span><strong>+6 %</strong><em>Efecto bajo</em></li>
+            </ul>
+          </div>
+
+          <!-- Grupal -->
+          <div class="mock__panel" role="tabpanel" id="tab-grp" aria-labelledby="t-grp" hidden>
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">Sub-16 · 22 jugadores · Salto vertical</p>
+                <p class="mock__title">Efecto por grupo madurativo</p>
+              </div>
+              <span class="mock__pill">Ejemplo</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <line x1="20" y1="104" x2="300" y2="104" stroke="#DCE3EA" stroke-width="1.5"/>
+              <rect x="50" y="62" width="46" height="42" rx="6" fill="#1FA0C8"/>
+              <rect x="137" y="34" width="46" height="70" rx="6" fill="#20B2A2"/>
+              <rect x="224" y="48" width="46" height="56" rx="6" fill="#46C08B"/>
+              <circle cx="160" cy="31" r="5" fill="#1D2D3D"/>
+              <text x="73" y="117" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">Antes del pico</text>
+              <text x="160" y="117" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">En el pico</text>
+              <text x="247" y="117" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">Después del pico</text>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--bar"></i>Efecto medio del grupo</span>
+              <span><i class="lg lg--pt"></i>Jugador 07</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--mid"></span><span>Antes del pico · 7 jug.</span><strong>+1,2 cm</strong><em>Efecto moderado</em></li>
+              <li><span class="dot dot--teal"></span><span>En el pico · 9 jug.</span><strong>+2,0 cm</strong><em>Efecto alto</em></li>
+              <li><span class="dot dot--high"></span><span>Después del pico · 6 jug.</span><strong>+1,6 cm</strong><em>Efecto moderado</em></li>
+            </ul>
+          </div>
+
+          <!-- Correlaciones -->
+          <div class="mock__panel" role="tabpanel" id="tab-cor" aria-labelledby="t-cor" hidden>
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">Sub-16 · Temporada actual</p>
+                <p class="mock__title">Relación entre capacidades</p>
+              </div>
+              <span class="mock__pill">Ejemplo</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <line x1="20" y1="108" x2="310" y2="108" stroke="#DCE3EA" stroke-width="1.5"/>
+              <line x1="20" y1="8" x2="20" y2="108" stroke="#DCE3EA" stroke-width="1.5"/>
+              <circle cx="27.9" cy="80.1" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="47.8" cy="73.5" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="62.4" cy="77.0" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="72.7" cy="77.9" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="88.4" cy="72.4" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="104.8" cy="60.2" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="125.1" cy="73.0" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="137.5" cy="55.6" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="159.5" cy="67.7" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="174.9" cy="50.7" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="195.7" cy="37.3" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="210.3" cy="39.7" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="217.7" cy="33.8" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="235.7" cy="46.2" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="250.2" cy="37.1" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="271.7" cy="26.9" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="286.6" cy="15.9" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="296.7" cy="16.9" r="4" fill="#1FA0C8" fill-opacity=".75"/>
+              <line x1="25" y1="90" x2="310" y2="22" stroke="#1D2D3D" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="306" y="118" text-anchor="end" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">Fuerza</text>
+              <text x="26" y="16" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">Salto vertical</text>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--pt lg--pt-cyan"></i>Jugadores Sub-16</span>
+              <span><i class="lg lg--trend"></i>Tendencia</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--high"></span><span>Fuerza ↔ Salto vertical</span><strong>r = 0,62</strong><em>Relación fuerte</em></li>
+              <li><span class="dot dot--mid"></span><span>Salto ↔ Sprint 20 m</span><strong>r = −0,48</strong><em>Relación moderada</em></li>
+              <li><span class="dot dot--low"></span><span>Carga ↔ Bienestar</span><strong>r = −0,31</strong><em>Relación débil</em></li>
+            </ul>
+          </div>
+
+          <!-- Nodos -->
+          <div class="mock__panel" role="tabpanel" id="tab-nod" aria-labelledby="t-nod" hidden>
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">Jugador 07 · Sub-16</p>
+                <p class="mock__title">Mapa de relaciones del perfil</p>
+              </div>
+              <span class="mock__pill">Ejemplo</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <line x1="175" y1="50" x2="90" y2="28" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/><line x1="175" y1="50" x2="262" y2="26" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="3.5" stroke-linecap="round"/><line x1="175" y1="50" x2="80" y2="80" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/><line x1="175" y1="50" x2="178" y2="92" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="2.5" stroke-linecap="round"/><line x1="90" y1="28" x2="262" y2="26" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="2.5" stroke-linecap="round"/><line x1="80" y1="80" x2="268" y2="82" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/><line x1="262" y1="26" x2="268" y2="82" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="175" cy="50" r="20" fill="#20B2A2"/><text x="175" y="54" text-anchor="middle" font-size="10" font-weight="700" font-family="Montserrat, Arial, sans-serif" fill="#FFFFFF">Fuerza</text><circle cx="90" cy="28" r="10" fill="#46C08B"/><text x="90" y="14" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Salto</text><circle cx="262" cy="26" r="10" fill="#1FA0C8"/><text x="262" y="12" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Sprint</text><circle cx="80" cy="80" r="8" fill="#2F6FD6"/><text x="80" y="98" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Carga</text><circle cx="268" cy="82" r="8" fill="#9AA6B2"/><text x="268" y="100" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Bienestar</text><circle cx="178" cy="92" r="7" fill="#416180"/><text x="178" y="109" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Maduración</text>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--pt lg--pt-teal"></i>Capacidad</span>
+              <span><i class="lg lg--edge"></i>Relación (grosor = intensidad)</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--teal"></span><span>Nodo central</span><strong>Fuerza</strong><em>Más conectado</em></li>
+              <li><span class="dot dot--high"></span><span>Relación principal</span><strong>Fuerza ↔ Salto</strong><em>Prioridad</em></li>
+              <li><span class="dot dot--mid"></span><span>Perfil</span><strong>Explosivo</strong><em>En desarrollo</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2 · DISEÑADO PARA ============ -->
+    <section class="segments">
+      <div class="container">
+        <p class="segments__label">Diseñado para</p>
+        <ul class="segments__list">
+          <li>Academias de clubes profesionales</li>
+          <li>Fútbol base</li>
+          <li>Federaciones deportivas</li>
+          <li>Programas de tecnificación</li>
+          <li>Centros de alto rendimiento</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3 · MISIÓN ============ -->
+    <section class="mission">
+      <div class="container">
+        <p class="eyebrow">Ciencia aplicada al día a día del cuerpo técnico</p>
+        <h2>Nuestra misión es ayudarte a desarrollar mejores deportistas, respetando el ritmo de crecimiento de cada uno.</h2>
+      </div>
+    </section>
+
+    <!-- ============ 4 · BENEFICIOS POR PERFIL ============ -->
+    <section class="section section--tint" id="para-quien">
+      <div class="container">
+        <p class="eyebrow">Para quién</p>
+        <h2 class="section__title">Un beneficio claro para cada perfil del club</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Para preparadores físicos</h3>
+            <p>Conocer el efecto del entrenamiento en cada jugador y en cada grupo. Ajustar cargas con seguridad y demostrar el impacto de tu trabajo.</p>
+          </article>
+          <article class="card">
+            <h3>Para cuerpos técnicos</h3>
+            <p>Ver qué capacidades se relacionan entre sí y dónde intervenir, con información clara y a tiempo, sin perder horas en hojas de cálculo.</p>
+          </article>
+          <article class="card">
+            <h3>Para directores de cantera</h3>
+            <p>Comparar a cada jugador con su categoría y con quienes están en su misma etapa de desarrollo. Evaluar el talento sin penalizar a quien madura más tarde.</p>
+          </article>
+          <article class="card">
+            <h3>Para deportistas</h3>
+            <p>Un seguimiento individual que respeta su etapa de crecimiento y le ayuda a progresar con cargas adecuadas.</p>
+          </article>
+          <article class="card">
+            <h3>Para clubes</h3>
+            <p>Proteger la inversión en formación con decisiones de promoción y continuidad mejor fundamentadas.</p>
+          </article>
+          <article class="card">
+            <h3>Para federaciones</h3>
+            <p>Seguimiento longitudinal de deportistas en programas de tecnificación, comparable entre temporadas, centros y deportes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 · PLATAFORMA ============ -->
+    <section class="section" id="plataforma">
+      <div class="container">
+        <p class="eyebrow">Plataforma</p>
+        <h2 class="section__title">Del jugador al grupo, en una sola plataforma</h2>
+        <p class="section__lead">Análisis individual y grupal, relaciones entre variables e inteligencia artificial generativa, desarrollados íntegramente por INDARLAB.</p>
+        <div class="showcase">
+          <article class="showcase__item">
+            <h3>Análisis individual</h3>
+            <p>La evolución de cada deportista frente a su propio historial y el efecto estimado del entrenamiento.</p>
+          </article>
+          <article class="showcase__item">
+            <h3>Análisis grupal</h3>
+            <p>Comparativas por categoría o por estado madurativo, para leer cada resultado en su contexto.</p>
+          </article>
+          <article class="showcase__item">
+            <h3>Correlaciones</h3>
+            <p>Qué capacidades se relacionan entre sí y cómo cambian juntas a lo largo de la temporada.</p>
+          </article>
+          <article class="showcase__item">
+            <h3>Análisis por nodos</h3>
+            <p>Una vista de conjunto del perfil de cada deportista y del grupo, para detectar patrones de un vistazo.</p>
+          </article>
+          <article class="showcase__item">
+            <h3>Informes con IA generativa</h3>
+            <p>Informes por perfil profesional, generados a partir de resultados ya calculados y revisados por el staff.</p>
+          </article>
+          <article class="showcase__item">
+            <h3>Consultas en lenguaje natural</h3>
+            <p>Pregunta por un jugador o un grupo y obtén la respuesta a partir de los datos del club.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6 · APOYA TUS DECISIONES ============ -->
+    <section class="decision">
+      <div class="container decision__inner">
+        <div>
+          <h2>Apoya tus decisiones con evidencia</h2>
+          <p>Desde más de dieciséis años de experiencia en el deporte de rendimiento y en la investigación, INDARLAB reúne en un solo lugar tests, GPS, fuerza y bienestar para darte una visión completa de cada deportista y de cada grupo.</p>
+        </div>
+        <a href="#contacto" class="btn btn--light">Solicitar una demo</a>
+      </div>
+    </section>
+
+    <!-- ============ 7 · TRES PILARES ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="features">
+          <article class="feature">
+            <span class="feature__num">01</span>
+            <h3>Todo en un solo lugar</h3>
+            <p>Integra los datos de los sistemas y fabricantes que ya usa tu club. Sin comprar hardware nuevo ni cambiar la forma de trabajar.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__num">02</span>
+            <h3>Tus datos, bajo tu control</h3>
+            <p>Cada club mantiene sus datos separados y bajo su control. Pensado para trabajar con deportistas jóvenes y con la confidencialidad que eso exige.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__num">03</span>
+            <h3>Individual y grupal a la vez</h3>
+            <p>Cada jugador se analiza frente a su propio historial y frente a su grupo, por categoría o estado madurativo, para ajustar el trabajo de forma individual.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8 · TECNOLOGÍA PROPIA (equivalente a "Powering Orreco.ai") ============ -->
+    <section class="section section--dark" id="tecnologia">
+      <div class="container split split--center">
+        <div>
+          <p class="eyebrow eyebrow--light">Tecnología 100 % INDARLAB</p>
+          <h2 class="section__title section__title--light">Todas las capas son nuestras</h2>
+          <p class="on-dark">Desde la integración de los datos hasta los motores estadísticos y la inteligencia artificial, cada capa de la plataforma está desarrollada por INDARLAB. Eso nos permite adaptarla a la realidad de cada club y garantizar la calidad de cada resultado.</p>
+        </div>
+        <ol class="stack">
+          <li><strong>Aplicación</strong><span>Paneles e informes para cada perfil</span></li>
+          <li><strong>IA generativa</strong><span>Informes y consultas sobre tus datos</span></li>
+          <li><strong>Motor de análisis por nodos</strong><span>Perfiles y patrones de conjunto</span></li>
+          <li><strong>Motor estadístico</strong><span>Análisis individual, grupal y correlaciones</span></li>
+          <li><strong>Integración de datos</strong><span>Sistemas y fabricantes del club</span></li>
+          <li><strong>Seguridad de los datos</strong><span>Datos separados y bajo control de cada club</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 9 · EVIDENCIA ============ -->
+    <section class="section section--tint" id="evidencia">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Basado en evidencia</p>
+          <h2 class="section__title">Basado en evidencia. Decisiones que se pueden aplicar.</h2>
+          <p>INDARLAB nace de la práctica y de la ciencia: más de dieciséis años como preparador físico en el rendimiento físico-deportivo, y una investigación doctoral en Ciencias del Deporte en la UPV/EHU sobre la evolución de futbolistas adolescentes.</p>
+          <p>Por eso cada resultado llega acompañado de lo que significa y de lo que se puede hacer con él.</p>
+        </div>
+        <div class="founder">
+          <p class="founder__name">Noel Gil López, PhD</p>
+          <p class="founder__role">Fundador · Doctor en Ciencias del Deporte</p>
+          <ul class="facts">
+            <li><strong>16+</strong> años en el deporte de rendimiento</li>
+            <li><strong>MVP</strong> funcionando con datos reales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 · CONTACTO ============ -->
+    <section class="cta" id="contacto">
+      <div class="container cta__inner">
+        <h2>¿Quieres ver INDARLAB con datos de tu club?</h2>
+        <p>Te enseñamos la plataforma y estudiamos contigo cómo puede ayudar a tu equipo.</p>
+        <a class="btn btn--light" href="mailto:noelandresgil@hotmail.com?subject=Demo%20INDARLAB">Solicitar una demo</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="brand brand--small">
+        <img src="assets/img/lauburu.svg" alt="" class="brand__symbol">
+        <span class="brand__name">INDAR<span class="grad">LAB</span></span>
+      </a>
+      <p>Gipuzkoa, Euskadi · <a href="mailto:noelandresgil@hotmail.com">noelandresgil@hotmail.com</a></p>
+      <p class="footer__legal">© <span id="year">2026</span> INDARLAB · <a href="#">Aviso legal</a> · <a href="#">Privacidad</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

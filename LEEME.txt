@@ -1,0 +1,24 @@
+INDARLAB · Sitio web (versión local)
+=====================================
+
+CÓMO VERLO
+1. Descomprime la carpeta.
+2. Haz doble clic en index.html. Se abre en tu navegador.
+   (La tipografía Montserrat se descarga de Google Fonts: necesitas conexión a internet
+   para verla igual que en el diseño. Sin conexión se usa una tipografía del sistema.)
+
+Opcional, para verlo como un servidor real:
+   Abre una terminal dentro de la carpeta y escribe:  python -m http.server 8000
+   Después abre en el navegador:  http://localhost:8000
+
+QUÉ HAY EN CADA ARCHIVO
+- index.html ............ todos los textos de la web, sección por sección.
+- assets/css/styles.css . colores, tipografía y diseño. Los colores de marca están al principio.
+- assets/js/main.js ..... menú del móvil y año del pie de página.
+- assets/img/ ........... símbolo (lauburu) y favicon.
+
+PENDIENTE ANTES DE PUBLICARLO EN INTERNET
+- Páginas de Aviso legal y Política de privacidad (obligatorias en España).
+- Confirmar con Sportek Hub / BIC Gipuzkoa que puedes mencionarlos.
+- Cambiar el correo de contacto si creas uno de la empresa (aparece dos veces en index.html).
+- El botón "Log in" de la cabecera lleva a https://indarlab.onrender.com/ (si cambias la dirección de la app, cámbiala en index.html).
