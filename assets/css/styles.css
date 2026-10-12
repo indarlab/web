@@ -242,21 +242,6 @@ p { margin: 0 0 1em; }
 .stack li:nth-child(4) { background: linear-gradient(90deg, rgba(47,111,214,.22), var(--navy-2)); }
 
 
-/* ---------- Del campo al dato (fotos) ---------- */
-.tests { background: var(--navy); padding: 88px 0; }
-.tests__title { color: var(--white); font-size: clamp(26px, 3.2vw, 38px); font-weight: 800; max-width: 760px; margin-bottom: 36px; }
-.tests__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.tests__item { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 9; }
-.tests__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
-.tests__item:hover img { transform: scale(1.03); }
-.tests__item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(29,45,61,.75), transparent 55%); }
-.tests__item figcaption {
-  position: absolute; left: 22px; bottom: 18px; z-index: 1;
-  color: var(--white); font-weight: 800; font-size: clamp(18px, 2vw, 24px); letter-spacing: .02em;
-}
-.tests__item figcaption::before { content: ""; display: block; width: 28px; height: 4px; border-radius: 2px; background: var(--grad); margin-bottom: 10px; }
-@media (prefers-reduced-motion: reduce) { .tests__item img { transition: none; } .tests__item:hover img { transform: none; } }
-
 /* ---------- Plataforma: tarjetas con pantallas en perspectiva ---------- */
 .platform { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .pcard { background: var(--tint); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
@@ -365,6 +350,55 @@ p { margin: 0 0 1em; }
 .orbit__node--5 { left: 14%; top: 70%; }
 .orbit__node--6 { left: 14%; top: 30%; }
 
+
+/* ---------- Fondo con los colores de INDARLAB Engine (webapp) ---------- */
+.section--engine {
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgba(32,178,162,.12), transparent 60%),
+    radial-gradient(900px 420px at -10% 10%, rgba(47,111,214,.10), transparent 60%),
+    #0E1A25;
+  color: #C9D6E2;
+}
+.section--engine-2 {
+  background:
+    radial-gradient(900px 420px at 10% 100%, rgba(70,192,139,.10), transparent 60%),
+    radial-gradient(1000px 500px at 100% 40%, rgba(31,160,200,.10), transparent 60%),
+    #0E1A25;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.section--engine .section__lead { color: #9FB3C8; }
+
+/* Tarjetas de plataforma: versión compacta y oscura */
+.platform { gap: 18px; }
+.pcard { background: #15232F; border: 1px solid rgba(255,255,255,.08); }
+.pcard__media {
+  height: 180px;
+  background: radial-gradient(circle at 70% 15%, rgba(32,178,162,.16), transparent 60%), #1D2D3D;
+}
+.pcard__body { padding: 18px 20px 22px; }
+.pcard__body h3 { font-size: 18px; color: #FFFFFF; margin-bottom: 6px; }
+.pcard__body p { font-size: 14.5px; color: #9FB3C8; }
+.scr { width: 230px; font-size: 8.5px; padding: 10px 12px 12px; border-radius: 10px;
+  box-shadow: -14px 20px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.08) inset; }
+.scr__bar { font-size: 9.5px; margin-bottom: 7px; gap: 6px; }
+.scr__logo { width: 12px; height: 12px; }
+.scr__tag { font-size: 8px; padding: 2px 6px; }
+.scr__label, .scr__legend, .scr__foot { font-size: 8px; }
+.scr__heat-y, .scr__heat-x, .scr__heat-grid span { font-size: 7.5px; }
+.scr__heat-grid span { padding: 4px 0; }
+.scr__bars li { grid-template-columns: 54px 1fr 28px; }
+.scr__bars { gap: 6px; }
+
+/* Órbita más pequeña */
+.tech { grid-template-columns: 1fr 1fr; gap: 48px; }
+.orbit { max-width: 440px; }
+.orbit__node { font-size: 12px; padding: 8px 10px; width: 31%; min-height: 14%; background: #0E1A25; box-shadow: 0 0 0 5px #0E1A25; }
+.orbit__ring { background: radial-gradient(circle, #13293A 0%, #0E1A25 72%); }
+.orbit__core > span { font-size: clamp(22px, 2.6vw, 32px); }
+.layers li { padding: 7px 0; }
+.layers strong { font-size: 15px; }
+.layers span { font-size: 13.5px; }
+
 /* ---------- Móvil y tablet ---------- */
 @media (max-width: 960px) {
   .hero__grid, .split { grid-template-columns: 1fr; }
@@ -383,11 +417,11 @@ p { margin: 0 0 1em; }
   .nav__links.is-open { display: flex; }
   .nav__links .btn--ghost + .btn { margin-left: 0; }
   .hero { padding: 56px 0; }
-  .section, .mission, .cta, .decision, .tests { padding: 64px 0; }
-  .tests__grid { grid-template-columns: 1fr; }
+  .section, .mission, .cta, .decision { padding: 64px 0; }
   .cards, .features, .showcase, .platform { grid-template-columns: 1fr; }
-  .pcard__media { height: 240px; }
-  .scr { width: 250px; font-size: 10px; }
+  .pcard__media { height: 200px; }
+  .scr { width: 220px; }
+  .orbit__node { font-size: 10.5px; }
   .orbit__node { font-size: 11px; padding: 6px; width: 32%; }
   .mock__rows em { min-width: 0; }
   .mock__rows li { grid-template-columns: 14px 1fr auto; row-gap: 2px; }
