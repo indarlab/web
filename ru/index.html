@@ -1,1 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INDARLAB · Спортивная наука и собственный ИИ для развития талантов</title>
+  <meta name="description" content="INDARLAB анализирует каждого спортсмена и каждую группу и оценивает эффект тренировок с помощью собственных статистических движков и искусственного интеллекта.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=6">
+</head>
+<body>
 
+  <!-- ============ CABECERA ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand" aria-label="INDARLAB, главная">
+        <img src="../assets/img/lauburu.svg" alt="" class="brand__symbol">
+        <span class="brand__name">INDAR<span class="grad">LAB</span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" aria-label="Основное меню">
+        <a href="#para-quien">Для кого</a>
+        <a href="#plataforma">Платформа</a>
+        <a href="#tecnologia">Технологии</a>
+        <a href="#evidencia">Научная база</a>
+        <a href="https://indarlab.onrender.com/" class="btn btn--small btn--ghost">Войти</a>
+        <a href="#contacto" class="btn btn--small">Запросить демо</a>
+      </nav>
+      <div class="lang" role="navigation" aria-label="Idioma / Language"><a href="../" lang="es" hreflang="es" title="Español">ES</a><a href="../en/" lang="en" hreflang="en" title="English">EN</a><a href="../ru/" lang="ru" hreflang="ru" aria-current="true" title="Русский">RU</a></div>
+      
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============ 1 · HERO ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Спортивная наука и собственный ИИ для развития талантов</p>
+          <h1>Измеряйте реальный эффект тренировок у <span class="grad">каждого спортсмена</span></h1>
+          <p class="lead">INDARLAB анализирует каждого спортсмена и каждую группу — по возрастной категории или уровню биологического созревания — и оценивает эффект тренировок с помощью собственных статистических движков и искусственного интеллекта. На основе данных, которые ваш клуб уже собирает.</p>
+          <div class="hero__ctas">
+            <a href="#contacto" class="btn">Запросить демо</a>
+            <a href="#para-quien" class="btn btn--ghost">Узнать о преимуществах</a>
+          </div>
+        </div>
+
+        <!-- Maqueta interactiva de la plataforma (datos ficticios) -->
+        <div class="mock" aria-label="Примеры платформы на вымышленных данных">
+          <div class="mock__tabs" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="tab-ind" id="t-ind" class="is-active">Индивидуальный</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-grp" id="t-grp" tabindex="-1">Групповой</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-cor" id="t-cor" tabindex="-1">Корреляции</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-nod" id="t-nod" tabindex="-1">Узлы</button>
+          </div>
+
+          <!-- Individual -->
+          <div class="mock__panel" role="tabpanel" id="tab-ind" aria-labelledby="t-ind">
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">Игрок 07 · U16 · Пик роста</p>
+                <p class="mock__title">Оценка эффекта тренировок</p>
+              </div>
+              <span class="mock__pill">Пример</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 96 C60 92 120 86 180 80 C240 74 280 70 320 66" fill="none" stroke="#9AA6B2" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>
+              <path d="M0 96 C60 88 120 72 180 58 C240 44 280 34 320 26" fill="none" stroke="#20B2A2" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M320 66 L320 26" stroke="#46C08B" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="320" cy="26" r="4.5" fill="#1D2D3D"/>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--obs"></i>Наблюдаемая динамика</span>
+              <span><i class="lg lg--mat"></i>Ожидаемое для его группы созревания</span>
+              <span><i class="lg lg--eff"></i>Эффект тренировок</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--high"></span><span>Вертикальный прыжок</span><strong>+2,1 см</strong><em>Высокий эффект</em></li>
+              <li><span class="dot dot--mid"></span><span>Спринт 20 м</span><strong>−0,03 с</strong><em>Умеренный эффект</em></li>
+              <li><span class="dot dot--low"></span><span>Сила</span><strong>+6 %</strong><em>Низкий эффект</em></li>
+            </ul>
+          </div>
+
+          <!-- Grupal -->
+          <div class="mock__panel" role="tabpanel" id="tab-grp" aria-labelledby="t-grp" hidden>
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">U16 · 22 игрока · Вертикальный прыжок</p>
+                <p class="mock__title">Эффект по группам созревания</p>
+              </div>
+              <span class="mock__pill">Пример</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <line x1="20" y1="104" x2="300" y2="104" stroke="#DCE3EA" stroke-width="1.5"/>
+              <rect x="50" y="62" width="46" height="42" rx="6" fill="#1FA0C8"/>
+              <rect x="137" y="34" width="46" height="70" rx="6" fill="#20B2A2"/>
+              <rect x="224" y="48" width="46" height="56" rx="6" fill="#46C08B"/>
+              <circle cx="160" cy="31" r="5" fill="#1D2D3D"/>
+              <text x="73" y="117" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">До пика</text>
+              <text x="160" y="117" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">На пике</text>
+              <text x="247" y="117" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">После пика</text>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--bar"></i>Средний эффект группы</span>
+              <span><i class="lg lg--pt"></i>Игрок 07</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--mid"></span><span>До пика · 7 игр.</span><strong>+1,2 см</strong><em>Умеренный эффект</em></li>
+              <li><span class="dot dot--teal"></span><span>На пике · 9 игр.</span><strong>+2,0 см</strong><em>Высокий эффект</em></li>
+              <li><span class="dot dot--high"></span><span>После пика · 6 игр.</span><strong>+1,6 см</strong><em>Умеренный эффект</em></li>
+            </ul>
+          </div>
+
+          <!-- Correlaciones -->
+          <div class="mock__panel" role="tabpanel" id="tab-cor" aria-labelledby="t-cor" hidden>
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">U16 · Текущий сезон</p>
+                <p class="mock__title">Взаимосвязь качеств</p>
+              </div>
+              <span class="mock__pill">Пример</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <line x1="20" y1="108" x2="310" y2="108" stroke="#DCE3EA" stroke-width="1.5"/>
+              <line x1="20" y1="8" x2="20" y2="108" stroke="#DCE3EA" stroke-width="1.5"/>
+              <circle cx="27.9" cy="80.1" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="47.8" cy="73.5" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="62.4" cy="77.0" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="72.7" cy="77.9" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="88.4" cy="72.4" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="104.8" cy="60.2" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="125.1" cy="73.0" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="137.5" cy="55.6" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="159.5" cy="67.7" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="174.9" cy="50.7" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="195.7" cy="37.3" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="210.3" cy="39.7" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="217.7" cy="33.8" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="235.7" cy="46.2" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="250.2" cy="37.1" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="271.7" cy="26.9" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="286.6" cy="15.9" r="4" fill="#1FA0C8" fill-opacity=".75"/><circle cx="296.7" cy="16.9" r="4" fill="#1FA0C8" fill-opacity=".75"/>
+              <line x1="25" y1="90" x2="310" y2="22" stroke="#1D2D3D" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="306" y="118" text-anchor="end" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">Сила</text>
+              <text x="26" y="16" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#5F6B78">Вертикальный прыжок</text>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--pt lg--pt-cyan"></i>Игроки U16</span>
+              <span><i class="lg lg--trend"></i>Тренд</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--high"></span><span>Сила ↔ Вертикальный прыжок</span><strong>r = 0,62</strong><em>Сильная связь</em></li>
+              <li><span class="dot dot--mid"></span><span>Прыжок ↔ Спринт 20 м</span><strong>r = −0,48</strong><em>Умеренная связь</em></li>
+              <li><span class="dot dot--low"></span><span>Нагрузка ↔ Самочувствие</span><strong>r = −0,31</strong><em>Слабая связь</em></li>
+            </ul>
+          </div>
+
+          <!-- Nodos -->
+          <div class="mock__panel" role="tabpanel" id="tab-nod" aria-labelledby="t-nod" hidden>
+            <div class="mock__head">
+              <div>
+                <p class="mock__label">Игрок 07 · U16</p>
+                <p class="mock__title">Карта взаимосвязей профиля</p>
+              </div>
+              <span class="mock__pill">Пример</span>
+            </div>
+            <svg class="mock__chart" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <line x1="175" y1="50" x2="90" y2="28" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/><line x1="175" y1="50" x2="262" y2="26" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="3.5" stroke-linecap="round"/><line x1="175" y1="50" x2="80" y2="80" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/><line x1="175" y1="50" x2="178" y2="92" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="2.5" stroke-linecap="round"/><line x1="90" y1="28" x2="262" y2="26" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="2.5" stroke-linecap="round"/><line x1="80" y1="80" x2="268" y2="82" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/><line x1="262" y1="26" x2="268" y2="82" stroke="#9AA6B2" stroke-opacity=".7" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="175" cy="50" r="20" fill="#20B2A2"/><text x="175" y="54" text-anchor="middle" font-size="10" font-weight="700" font-family="Montserrat, Arial, sans-serif" fill="#FFFFFF">Сила</text><circle cx="90" cy="28" r="10" fill="#46C08B"/><text x="90" y="14" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Прыжок</text><circle cx="262" cy="26" r="10" fill="#1FA0C8"/><text x="262" y="12" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Спринт</text><circle cx="80" cy="80" r="8" fill="#2F6FD6"/><text x="80" y="98" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Нагрузка</text><circle cx="268" cy="82" r="8" fill="#9AA6B2"/><text x="268" y="100" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Самочувствие</text><circle cx="178" cy="92" r="7" fill="#416180"/><text x="178" y="109" text-anchor="middle" font-size="11" font-family="Montserrat, Arial, sans-serif" fill="#22303E">Созревание</text>
+            </svg>
+            <div class="mock__legend">
+              <span><i class="lg lg--pt lg--pt-teal"></i>Качество</span>
+              <span><i class="lg lg--edge"></i>Связь (толщина = сила)</span>
+            </div>
+            <ul class="mock__rows">
+              <li><span class="dot dot--teal"></span><span>Центральный узел</span><strong>Сила</strong><em>Наиболее связанный</em></li>
+              <li><span class="dot dot--high"></span><span>Главная связь</span><strong>Сила ↔ Прыжок</strong><em>Приоритет</em></li>
+              <li><span class="dot dot--mid"></span><span>Профиль</span><strong>Взрывной</strong><em>В развитии</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2 · DISEÑADO PARA ============ -->
+    <section class="segments">
+      <div class="container">
+        <p class="segments__label">Создано для</p>
+        <ul class="segments__list">
+          <li>Академий профессиональных клубов</li>
+          <li>Детско-юношеского футбола</li>
+          <li>Спортивных федераций</li>
+          <li>Программ подготовки резерва</li>
+          <li>Центров высших достижений</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3 · MISIÓN ============ -->
+    <section class="mission">
+      <div class="container">
+        <p class="eyebrow">Прикладная наука для повседневной работы тренерского штаба</p>
+        <h2>Наша миссия — помочь вам воспитывать лучших спортсменов, уважая индивидуальный темп роста каждого.</h2>
+      </div>
+    </section>
+
+    <!-- ============ 4 · BENEFICIOS POR PERFIL ============ -->
+    <section class="section section--tint" id="para-quien">
+      <div class="container">
+        <p class="eyebrow">Для кого</p>
+        <h2 class="section__title">Понятная польза для каждой роли в клубе</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Для тренеров по физической подготовке</h3>
+            <p>Знайте эффект тренировок у каждого игрока и в каждой группе. Корректируйте нагрузки безопасно и показывайте результат своей работы.</p>
+          </article>
+          <article class="card">
+            <h3>Для тренерского штаба</h3>
+            <p>Видьте, какие качества связаны между собой и где нужно вмешаться, — с понятной и своевременной информацией, без часов работы в таблицах.</p>
+          </article>
+          <article class="card">
+            <h3>Для директоров академий</h3>
+            <p>Сравнивайте каждого игрока с его возрастной категорией и со сверстниками на том же этапе развития. Оценивайте талант, не наказывая тех, кто созревает позже.</p>
+          </article>
+          <article class="card">
+            <h3>Для спортсменов</h3>
+            <p>Индивидуальное сопровождение, которое учитывает этап роста и помогает прогрессировать с адекватными нагрузками.</p>
+          </article>
+          <article class="card">
+            <h3>Для клубов</h3>
+            <p>Защитите инвестиции в подготовку благодаря более обоснованным решениям о переводе и продолжении работы с игроками.</p>
+          </article>
+          <article class="card">
+            <h3>Для федераций</h3>
+            <p>Многолетнее наблюдение за спортсменами в программах подготовки резерва, сопоставимое между сезонами, центрами и видами спорта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 · PLATAFORMA ============ -->
+    <section class="section section--engine" id="plataforma">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">Платформа</p>
+        <h2 class="section__title section__title--light">От игрока к группе — на одной платформе</h2>
+        <p class="section__lead">Индивидуальный и групповой анализ, взаимосвязи между показателями и генеративный искусственный интеллект — всё разработано INDARLAB.</p>
+        <div class="platform">
+          <article class="pcard">
+            <div class="pcard__media" aria-hidden="true">
+              <div class="scr scr--a">
+<div class="scr__bar"><span class="scr__logo"></span><b>Игрок 7 · U16</b><span class="scr__tag scr__tag--pos">+2,9 см</span></div>
+                <p class="scr__label">Прыжок CMJ · динамика по этапам</p>
+                <svg class="scr__chart" viewBox="0 0 300 110"><rect x="0" y="62" width="300" height="26" fill="rgba(47,111,214,.22)"/><line x1="0" x2="300" y1="75" y2="75" stroke="#2F6FD6" stroke-dasharray="4 4"/><polyline points="20,75 110,64 200,40 285,24" fill="none" stroke="#20B2A2" stroke-width="3"/><g fill="#20B2A2" stroke="#0E1A25" stroke-width="2"><circle cx="20" cy="75" r="5"/><circle cx="110" cy="64" r="5"/><circle cx="200" cy="40" r="5"/><circle cx="285" cy="24" r="5"/></g></svg>
+                <ul class="scr__rows"><li><span>CMJ</span><b>34,8 см</b><i class="ok"></i></li><li><span>Спринт 30 м</span><b>4,31 с</b><i class="ok"></i></li><li><span>Пик IMTP</span><b>2 340 Н</b><i class="ok"></i></li><li><span>COD 505</span><b>2,48 с</b><i class="warn"></i></li></ul>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <h3>Индивидуальный анализ</h3>
+              <p>Каждый спортсмен в сравнении с собственной историей: что действительно изменилось, насколько и какова оценка эффекта тренировок по каждому показателю.</p>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media" aria-hidden="true">
+              <div class="scr scr--b">
+<div class="scr__bar"><span class="scr__logo"></span><b>U14 · Предсезонка → Январь</b><span class="scr__tag">24 спортсмена</span></div>
+                <p class="scr__label">Прогресс группы по качествам</p>
+                <ul class="scr__bars"><li><span>CMJ</span><div class="scr__track"><div class="scr__fill " style="width:92%"></div></div><b>92 %</b></li><li><span>Пик IMTP</span><div class="scr__track"><div class="scr__fill " style="width:85%"></div></div><b>85 %</b></li><li><span>Спринт 30 м</span><div class="scr__track"><div class="scr__fill " style="width:78%"></div></div><b>78 %</b></li><li><span>COD 505</span><div class="scr__track"><div class="scr__fill scr__fill--warn" style="width:41%"></div></div><b>41 %</b></li></ul>
+                <div class="scr__legend"><span><i class="ok"></i>Pre-PHV</span><span><i class="cy"></i>Circa-PHV</span><span><i class="bl"></i>Post-PHV</span></div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <h3>Групповой анализ</h3>
+              <p>Сравнивайте по возрастной категории или уровню созревания и узнайте, какие качества группа улучшает, а каким нужно больше внимания.</p>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media" aria-hidden="true">
+              <div class="scr scr--a">
+<div class="scr__bar"><span class="scr__logo"></span><b>Корреляции изменений (Δ)</b><span class="scr__tag">U16</span></div>
+                <div class="scr__heat"><div class="scr__heat-y"><span>CMJ</span><span>Спринт</span><span>IMTP</span><span>COD</span><span>RSI</span></div><div class="scr__heat-grid"><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(32,178,162,0,76)">0,72</span><span style="background:rgba(32,178,162,0,45)">0,35</span><span style="background:rgba(228,87,46,0,32)">-0,20</span><span style="background:rgba(32,178,162,0,69)">0,64</span><span style="background:rgba(32,178,162,0,76)">0,72</span><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(32,178,162,0,30)">0,18</span><span style="background:rgba(228,87,46,0,50)">-0,41</span><span style="background:rgba(32,178,162,0,57)">0,50</span><span style="background:rgba(32,178,162,0,45)">0,35</span><span style="background:rgba(32,178,162,0,30)">0,18</span><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(32,178,162,0,22)">0,08</span><span style="background:rgba(32,178,162,0,68)">0,62</span><span style="background:rgba(228,87,46,0,32)">-0,20</span><span style="background:rgba(228,87,46,0,50)">-0,41</span><span style="background:rgba(32,178,162,0,22)">0,08</span><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(228,87,46,0,28)">-0,15</span><span style="background:rgba(32,178,162,0,69)">0,64</span><span style="background:rgba(32,178,162,0,57)">0,50</span><span style="background:rgba(32,178,162,0,68)">0,62</span><span style="background:rgba(228,87,46,0,28)">-0,15</span><span style="background:rgba(32,178,162,1)">1</span></div></div>
+                <div class="scr__heat-x"><span>CMJ</span><span>Спринт</span><span>IMTP</span><span>COD</span><span>RSI</span></div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <h3>Корреляции</h3>
+              <p>Какие качества меняются вместе в течение сезона — чтобы понять, как группа реагирует на запланированную работу.</p>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media" aria-hidden="true">
+              <div class="scr scr--b">
+<div class="scr__bar"><span class="scr__logo"></span><b>Карта узлов · U16</b><span class="scr__tag scr__tag--pos">Центральный узел: CMJ</span></div>
+                <svg class="scr__net" viewBox="0 0 300 160"><g stroke="rgba(32,178,162,.55)" stroke-width="1.5"><line x1="150" y1="62" x2="62" y2="30"/><line x1="150" y1="62" x2="240" y2="28"/><line x1="150" y1="62" x2="255" y2="100"/><line x1="150" y1="62" x2="60" y2="108"/><line x1="150" y1="62" x2="150" y2="135"/><line x1="150" y1="62" x2="105" y2="92"/><line x1="150" y1="62" x2="205" y2="92"/><line x1="240" y1="28" x2="255" y2="100"/><line x1="62" y1="30" x2="60" y2="108"/><line x1="105" y1="92" x2="150" y2="135"/><line x1="205" y1="92" x2="255" y2="100"/></g><circle cx="150" cy="62" r="16" fill="#46C08B"/><circle cx="62" cy="30" r="9" fill="#1FA0C8"/><circle cx="240" cy="28" r="10" fill="#20B2A2"/><circle cx="255" cy="100" r="8" fill="#2F6FD6"/><circle cx="60" cy="108" r="9" fill="#1FA0C8"/><circle cx="150" cy="135" r="7" fill="#2F6FD6"/><circle cx="105" cy="92" r="6" fill="#20B2A2"/><circle cx="205" cy="92" r="6" fill="#46C08B"/><g fill="#C9D6E2" font-size="10" font-weight="600" text-anchor="middle"><text x="150" y="41">CMJ</text><text x="62" y="16">Спринт</text><text x="240" y="13">IMTP</text><text x="255" y="87">RSI</text><text x="60" y="94">COD</text><text x="150" y="123">Макс. скорость</text></g></svg>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <h3>Анализ узлов</h3>
+              <p>Общая картина, которая показывает, какое качество связано с наибольшим числом показателей и на чём стоит сосредоточиться.</p>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media" aria-hidden="true">
+              <div class="scr scr--a">
+<div class="scr__bar"><span class="scr__logo"></span><b>Отчёт · Тренерский штаб</b><span class="scr__tag">12 апр</span></div>
+                <p class="scr__text"><b>Игрок 7.</b> Заметно улучшил прыгучесть и максимальную силу по сравнению с предсезонкой — выше минимального значимого изменения.</p>
+                <p class="scr__text">Смена направления немного ухудшилась. Рекомендуется пересмотреть специальную работу над COD в следующем микроцикле.</p>
+                <div class="scr__foot"><span class="scr__dot"></span>Проверено штабом<span class="scr__btn">Скачать PDF</span></div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <h3>Отчёты с генеративным ИИ</h3>
+              <p>Экономьте часы каждую неделю: отчёты для каждой профессиональной роли на основе уже рассчитанных результатов, проверенные штабом.</p>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media" aria-hidden="true">
+              <div class="scr scr--b">
+<div class="scr__bar"><span class="scr__logo"></span><b>Запросы</b><span class="scr__tag">Данные клуба</span></div>
+                <p class="scr__q">Кто больше всех улучшил спринт с предсезонки в U16?</p>
+                <p class="scr__a"><b>Игрок 7</b>, на −0,09 с. Ещё 5 спортсменов превышают минимальное значимое изменение: игроки 12, 3, 18, 9 и 21.</p>
+                <div class="scr__input">Введите вопрос…<span>↑</span></div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <h3>Запросы на естественном языке</h3>
+              <p>Спросите об игроке или группе и получите ответ за секунды на основе данных вашего клуба.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6 · APOYA TUS DECISIONES ============ -->
+    <section class="decision">
+      <div class="container decision__inner">
+        <div>
+          <h2>Принимайте решения на основе данных</h2>
+          <p>Опираясь на более чем шестнадцатилетний опыт в спорте высших достижений и в науке, INDARLAB объединяет в одном месте тесты, GPS, силовые показатели и самочувствие, чтобы дать вам полную картину каждого спортсмена и каждой группы.</p>
+        </div>
+        <a href="#contacto" class="btn btn--light">Запросить демо</a>
+      </div>
+    </section>
+
+    <!-- ============ 7 · TRES PILARES ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="features">
+          <article class="feature">
+            <span class="feature__num">01</span>
+            <h3>Всё в одном месте</h3>
+            <p>Объединяйте данные систем и производителей, которыми уже пользуется ваш клуб. Без покупки нового оборудования и без изменения привычной работы.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__num">02</span>
+            <h3>Ваши данные под вашим контролем</h3>
+            <p>Данные каждого клуба хранятся отдельно и под его контролем. Создано для работы с юными спортсменами и с той конфиденциальностью, которой это требует.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__num">03</span>
+            <h3>Индивидуально и в группе одновременно</h3>
+            <p>Каждый игрок анализируется в сравнении с собственной историей и со своей группой — по возрастной категории или уровню созревания, — чтобы индивидуализировать работу.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8 · TECNOLOGÍA PROPIA ============ -->
+    <section class="section section--engine section--engine-2" id="tecnologia">
+      <div class="container tech">
+        <div class="tech__text">
+          <p class="eyebrow eyebrow--light">Технологии INDARLAB на 100 %</p>
+          <h2 class="section__title section__title--light">Все уровни — наши</h2>
+          <p class="on-dark">От интеграции данных до статистических движков и искусственного интеллекта — каждый уровень разработан INDARLAB. Это позволяет адаптировать платформу к реальности каждого клуба и гарантировать качество каждого результата.</p>
+          <ul class="layers"><li><strong>Интеграция данных</strong><span>Системы и производители клуба</span></li><li><strong>Статистический движок</strong><span>Индивидуальный и групповой анализ, корреляции</span></li><li><strong>Движок анализа узлов</strong><span>Профили и общие закономерности</span></li><li><strong>Генеративный ИИ</strong><span>Отчёты и запросы по вашим данным</span></li><li><strong>Приложение</strong><span>Панели и отчёты для каждой роли</span></li><li><strong>Безопасность данных</strong><span>Данные хранятся отдельно и под контролем каждого клуба</span></li></ul>
+        </div>
+        <div class="orbit" aria-hidden="true">
+          <div class="orbit__ring">
+            <svg class="orbit__dots" viewBox="0 0 100 100"><circle cx="12.60" cy="35.25" r="0.4" fill="#2F6FD6" opacity="0.64"/><circle cx="60.52" cy="20.13" r="0.4" fill="#20B2A2" opacity="0.76"/><circle cx="41.40" cy="74.65" r="0.25" fill="#46C08B" opacity="0.70"/><circle cx="15.55" cy="76.32" r="0.4" fill="#2F6FD6" opacity="0.78"/><circle cx="18.23" cy="18.97" r="0.5" fill="#46C08B" opacity="0.39"/><circle cx="51.60" cy="81.64" r="0.25" fill="#1FA0C8" opacity="0.86"/><circle cx="71.90" cy="16.63" r="0.5" fill="#1FA0C8" opacity="0.50"/><circle cx="28.40" cy="14.78" r="0.4" fill="#7FE0C0" opacity="0.78"/><circle cx="99.95" cy="48.65" r="0.25" fill="#1FA0C8" opacity="0.81"/><circle cx="3.82" cy="46.25" r="0.25" fill="#46C08B" opacity="0.40"/><circle cx="72.17" cy="18.07" r="0.4" fill="#46C08B" opacity="0.39"/><circle cx="97.77" cy="50.16" r="0.3" fill="#46C08B" opacity="0.95"/><circle cx="90.32" cy="45.00" r="0.4" fill="#2F6FD6" opacity="0.62"/><circle cx="57.84" cy="6.68" r="0.35" fill="#1FA0C8" opacity="0.57"/><circle cx="86.00" cy="41.73" r="0.25" fill="#46C08B" opacity="0.44"/><circle cx="35.90" cy="53.16" r="0.4" fill="#2F6FD6" opacity="0.47"/><circle cx="18.45" cy="48.24" r="0.6" fill="#7FE0C0" opacity="0.85"/><circle cx="82.95" cy="79.61" r="0.4" fill="#46C08B" opacity="0.99"/><circle cx="84.29" cy="43.67" r="0.5" fill="#46C08B" opacity="0.55"/><circle cx="24.35" cy="70.09" r="0.5" fill="#46C08B" opacity="0.77"/><circle cx="62.68" cy="66.64" r="0.4" fill="#2F6FD6" opacity="0.52"/><circle cx="39.43" cy="85.28" r="0.25" fill="#20B2A2" opacity="0.40"/><circle cx="51.89" cy="93.06" r="0.5" fill="#2F6FD6" opacity="0.59"/><circle cx="88.90" cy="39.79" r="0.4" fill="#20B2A2" opacity="0.89"/><circle cx="69.69" cy="93.85" r="0.3" fill="#20B2A2" opacity="0.55"/><circle cx="50.15" cy="97.31" r="0.3" fill="#2F6FD6" opacity="0.45"/><circle cx="80.41" cy="40.15" r="0.4" fill="#7FE0C0" opacity="0.74"/><circle cx="66.74" cy="63.68" r="0.5" fill="#20B2A2" opacity="0.98"/><circle cx="14.24" cy="78.98" r="0.4" fill="#2F6FD6" opacity="0.89"/><circle cx="9.21" cy="44.83" r="0.6" fill="#20B2A2" opacity="0.99"/><circle cx="18.98" cy="37.86" r="0.5" fill="#1FA0C8" opacity="0.75"/><circle cx="78.10" cy="33.37" r="0.6" fill="#1FA0C8" opacity="0.36"/><circle cx="50.23" cy="89.16" r="0.25" fill="#1FA0C8" opacity="0.46"/><circle cx="91.41" cy="42.92" r="0.25" fill="#7FE0C0" opacity="0.59"/><circle cx="22.55" cy="8.53" r="0.6" fill="#20B2A2" opacity="0.69"/><circle cx="88.36" cy="30.03" r="0.4" fill="#1FA0C8" opacity="0.94"/><circle cx="99.04" cy="56.59" r="0.6" fill="#46C08B" opacity="0.40"/><circle cx="30.76" cy="91.63" r="0.25" fill="#2F6FD6" opacity="0.40"/><circle cx="86.50" cy="60.47" r="0.6" fill="#20B2A2" opacity="0.83"/><circle cx="90.38" cy="26.12" r="0.35" fill="#7FE0C0" opacity="0.41"/><circle cx="83.50" cy="14.81" r="0.4" fill="#46C08B" opacity="0.96"/><circle cx="6.92" cy="28.79" r="0.5" fill="#7FE0C0" opacity="0.78"/><circle cx="16.60" cy="22.77" r="0.25" fill="#46C08B" opacity="0.41"/><circle cx="86.34" cy="15.79" r="0.6" fill="#2F6FD6" opacity="0.56"/><circle cx="10.78" cy="59.39" r="0.5" fill="#2F6FD6" opacity="0.40"/><circle cx="34.70" cy="38.69" r="0.4" fill="#46C08B" opacity="0.36"/><circle cx="18.97" cy="22.81" r="0.4" fill="#46C08B" opacity="0.52"/><circle cx="73.61" cy="79.75" r="0.5" fill="#20B2A2" opacity="0.48"/><circle cx="24.60" cy="88.66" r="0.4" fill="#20B2A2" opacity="0.67"/><circle cx="31.46" cy="18.25" r="0.3" fill="#20B2A2" opacity="0.76"/><circle cx="13.90" cy="82.06" r="0.5" fill="#20B2A2" opacity="0.95"/><circle cx="21.11" cy="50.64" r="0.25" fill="#1FA0C8" opacity="0.81"/><circle cx="85.96" cy="80.84" r="0.4" fill="#20B2A2" opacity="0.53"/><circle cx="14.85" cy="81.97" r="0.5" fill="#1FA0C8" opacity="0.67"/><circle cx="74.90" cy="11.78" r="0.5" fill="#46C08B" opacity="0.64"/><circle cx="41.65" cy="96.74" r="0.5" fill="#1FA0C8" opacity="0.38"/><circle cx="34.47" cy="89.94" r="0.5" fill="#20B2A2" opacity="0.36"/><circle cx="64.38" cy="86.25" r="0.35" fill="#20B2A2" opacity="0.50"/><circle cx="96.74" cy="45.29" r="0.25" fill="#2F6FD6" opacity="0.64"/><circle cx="65.70" cy="8.35" r="0.25" fill="#20B2A2" opacity="0.79"/><circle cx="48.20" cy="97.37" r="0.6" fill="#7FE0C0" opacity="0.36"/><circle cx="91.01" cy="59.49" r="0.3" fill="#1FA0C8" opacity="0.53"/><circle cx="89.87" cy="36.16" r="0.5" fill="#20B2A2" opacity="0.75"/><circle cx="60.08" cy="12.65" r="0.3" fill="#7FE0C0" opacity="0.41"/><circle cx="22.68" cy="58.21" r="0.6" fill="#46C08B" opacity="0.93"/><circle cx="15.29" cy="33.98" r="0.5" fill="#1FA0C8" opacity="0.87"/><circle cx="26.48" cy="17.06" r="0.3" fill="#46C08B" opacity="0.41"/><circle cx="76.45" cy="30.78" r="0.25" fill="#2F6FD6" opacity="0.99"/><circle cx="95.25" cy="29.49" r="0.35" fill="#46C08B" opacity="0.94"/><circle cx="82.47" cy="68.59" r="0.4" fill="#7FE0C0" opacity="0.57"/><circle cx="3.64" cy="53.66" r="0.25" fill="#46C08B" opacity="0.49"/><circle cx="88.66" cy="58.67" r="0.5" fill="#20B2A2" opacity="0.57"/><circle cx="90.64" cy="49.96" r="0.6" fill="#7FE0C0" opacity="0.69"/><circle cx="0.81" cy="52.29" r="0.6" fill="#20B2A2" opacity="0.41"/><circle cx="12.81" cy="35.60" r="0.6" fill="#20B2A2" opacity="0.71"/><circle cx="73.21" cy="15.20" r="0.5" fill="#7FE0C0" opacity="0.52"/><circle cx="83.81" cy="14.03" r="0.5" fill="#20B2A2" opacity="0.49"/><circle cx="1.01" cy="42.49" r="0.5" fill="#7FE0C0" opacity="0.67"/><circle cx="7.89" cy="49.16" r="0.5" fill="#2F6FD6" opacity="0.60"/><circle cx="0.68" cy="45.02" r="0.4" fill="#2F6FD6" opacity="0.70"/><circle cx="73.36" cy="65.50" r="0.3" fill="#2F6FD6" opacity="0.39"/><circle cx="85.46" cy="30.73" r="0.4" fill="#7FE0C0" opacity="0.52"/><circle cx="28.01" cy="84.80" r="0.4" fill="#46C08B" opacity="0.69"/><circle cx="26.58" cy="28.58" r="0.35" fill="#46C08B" opacity="0.43"/><circle cx="61.18" cy="66.57" r="0.25" fill="#1FA0C8" opacity="0.80"/><circle cx="51.59" cy="95.72" r="0.4" fill="#2F6FD6" opacity="0.42"/><circle cx="21.98" cy="48.15" r="0.35" fill="#2F6FD6" opacity="0.82"/><circle cx="97.74" cy="57.02" r="0.6" fill="#2F6FD6" opacity="0.62"/><circle cx="7.49" cy="39.60" r="0.6" fill="#20B2A2" opacity="0.70"/><circle cx="74.94" cy="16.23" r="0.5" fill="#20B2A2" opacity="0.73"/><circle cx="48.06" cy="16.57" r="0.35" fill="#1FA0C8" opacity="0.94"/><circle cx="83.64" cy="22.40" r="0.3" fill="#20B2A2" opacity="0.49"/><circle cx="82.24" cy="86.08" r="0.3" fill="#46C08B" opacity="0.44"/><circle cx="78.29" cy="69.75" r="0.4" fill="#20B2A2" opacity="0.70"/><circle cx="27.70" cy="26.85" r="0.25" fill="#2F6FD6" opacity="0.41"/><circle cx="88.21" cy="26.21" r="0.35" fill="#2F6FD6" opacity="0.43"/><circle cx="25.54" cy="86.73" r="0.6" fill="#46C08B" opacity="0.89"/><circle cx="90.43" cy="56.22" r="0.5" fill="#2F6FD6" opacity="0.75"/><circle cx="65.16" cy="87.98" r="0.25" fill="#20B2A2" opacity="0.48"/><circle cx="94.70" cy="27.89" r="0.25" fill="#20B2A2" opacity="0.73"/><circle cx="2.07" cy="61.64" r="0.25" fill="#7FE0C0" opacity="0.56"/><circle cx="25.84" cy="81.32" r="0.3" fill="#46C08B" opacity="0.74"/><circle cx="92.66" cy="61.21" r="0.3" fill="#7FE0C0" opacity="0.47"/><circle cx="24.13" cy="77.48" r="0.3" fill="#46C08B" opacity="0.74"/><circle cx="91.41" cy="54.02" r="0.25" fill="#7FE0C0" opacity="0.87"/><circle cx="65.53" cy="89.92" r="0.5" fill="#1FA0C8" opacity="0.99"/><circle cx="76.23" cy="73.50" r="0.6" fill="#7FE0C0" opacity="0.86"/><circle cx="36.18" cy="75.18" r="0.5" fill="#7FE0C0" opacity="0.80"/><circle cx="11.46" cy="75.93" r="0.6" fill="#1FA0C8" opacity="0.47"/><circle cx="78.98" cy="71.30" r="0.35" fill="#2F6FD6" opacity="0.99"/><circle cx="46.85" cy="71.66" r="0.6" fill="#20B2A2" opacity="0.54"/><circle cx="9.60" cy="31.12" r="0.5" fill="#2F6FD6" opacity="0.40"/><circle cx="18.68" cy="11.03" r="0.6" fill="#7FE0C0" opacity="0.43"/><circle cx="99.21" cy="57.11" r="0.5" fill="#20B2A2" opacity="0.42"/><circle cx="21.98" cy="69.95" r="0.25" fill="#7FE0C0" opacity="0.84"/><circle cx="49.23" cy="64.37" r="0.35" fill="#2F6FD6" opacity="0.94"/><circle cx="13.57" cy="71.33" r="0.5" fill="#46C08B" opacity="0.72"/><circle cx="66.14" cy="8.87" r="0.25" fill="#46C08B" opacity="0.71"/><circle cx="85.67" cy="35.52" r="0.4" fill="#20B2A2" opacity="0.66"/><circle cx="3.75" cy="37.52" r="0.5" fill="#7FE0C0" opacity="0.39"/><circle cx="11.15" cy="43.41" r="0.5" fill="#2F6FD6" opacity="0.55"/><circle cx="30.11" cy="20.68" r="0.5" fill="#1FA0C8" opacity="0.95"/><circle cx="52.60" cy="31.69" r="0.5" fill="#20B2A2" opacity="0.38"/><circle cx="34.32" cy="14.18" r="0.25" fill="#7FE0C0" opacity="0.93"/><circle cx="71.90" cy="48.45" r="0.35" fill="#20B2A2" opacity="0.40"/><circle cx="10.76" cy="55.56" r="0.3" fill="#46C08B" opacity="0.38"/><circle cx="41.63" cy="1.60" r="0.4" fill="#20B2A2" opacity="0.44"/><circle cx="82.63" cy="78.80" r="0.5" fill="#46C08B" opacity="0.62"/><circle cx="80.57" cy="60.37" r="0.5" fill="#1FA0C8" opacity="0.45"/><circle cx="30.28" cy="15.24" r="0.4" fill="#2F6FD6" opacity="0.74"/><circle cx="20.45" cy="83.94" r="0.6" fill="#20B2A2" opacity="0.69"/><circle cx="45.14" cy="0.90" r="0.3" fill="#2F6FD6" opacity="0.66"/><circle cx="60.37" cy="2.66" r="0.5" fill="#1FA0C8" opacity="0.90"/><circle cx="36.13" cy="17.93" r="0.5" fill="#20B2A2" opacity="0.80"/><circle cx="50.93" cy="5.92" r="0.3" fill="#2F6FD6" opacity="0.97"/><circle cx="92.91" cy="24.89" r="0.6" fill="#46C08B" opacity="0.38"/><circle cx="49.17" cy="63.86" r="0.25" fill="#46C08B" opacity="0.76"/><circle cx="44.15" cy="82.56" r="0.25" fill="#20B2A2" opacity="0.94"/><circle cx="21.17" cy="18.87" r="0.35" fill="#1FA0C8" opacity="0.66"/><circle cx="31.91" cy="77.09" r="0.6" fill="#46C08B" opacity="0.44"/><circle cx="5.50" cy="65.30" r="0.5" fill="#20B2A2" opacity="0.89"/><circle cx="49.33" cy="10.00" r="0.4" fill="#1FA0C8" opacity="0.88"/><circle cx="65.42" cy="24.43" r="0.5" fill="#2F6FD6" opacity="0.56"/><circle cx="71.34" cy="8.86" r="0.3" fill="#1FA0C8" opacity="0.63"/><circle cx="8.16" cy="60.18" r="0.35" fill="#46C08B" opacity="0.40"/><circle cx="13.87" cy="33.56" r="0.6" fill="#46C08B" opacity="0.65"/><circle cx="55.63" cy="73.97" r="0.6" fill="#1FA0C8" opacity="0.74"/><circle cx="53.66" cy="8.96" r="0.35" fill="#20B2A2" opacity="0.53"/><circle cx="31.89" cy="22.51" r="0.35" fill="#46C08B" opacity="0.59"/><circle cx="15.86" cy="63.27" r="0.5" fill="#1FA0C8" opacity="0.95"/><circle cx="63.04" cy="12.35" r="0.35" fill="#20B2A2" opacity="0.65"/><circle cx="85.62" cy="34.50" r="0.5" fill="#1FA0C8" opacity="0.51"/><circle cx="96.94" cy="57.17" r="0.6" fill="#7FE0C0" opacity="0.61"/><circle cx="46.71" cy="3.15" r="0.35" fill="#2F6FD6" opacity="0.87"/><circle cx="24.84" cy="33.78" r="0.3" fill="#7FE0C0" opacity="0.46"/><circle cx="40.52" cy="97.35" r="0.25" fill="#46C08B" opacity="0.49"/><circle cx="11.45" cy="32.60" r="0.25" fill="#7FE0C0" opacity="0.77"/><circle cx="27.52" cy="43.19" r="0.5" fill="#46C08B" opacity="0.40"/><circle cx="77.61" cy="71.53" r="0.35" fill="#20B2A2" opacity="0.41"/><circle cx="60.66" cy="25.89" r="0.4" fill="#20B2A2" opacity="0.51"/><circle cx="84.36" cy="27.50" r="0.35" fill="#7FE0C0" opacity="0.85"/><circle cx="63.20" cy="14.93" r="0.35" fill="#7FE0C0" opacity="0.79"/><circle cx="63.85" cy="11.36" r="0.25" fill="#46C08B" opacity="0.81"/><circle cx="68.04" cy="15.26" r="0.6" fill="#46C08B" opacity="0.58"/><circle cx="73.69" cy="9.27" r="0.4" fill="#46C08B" opacity="0.97"/><circle cx="39.61" cy="9.45" r="0.25" fill="#7FE0C0" opacity="0.62"/><circle cx="51.31" cy="98.78" r="0.3" fill="#7FE0C0" opacity="0.99"/><circle cx="30.60" cy="90.65" r="0.4" fill="#1FA0C8" opacity="0.63"/><circle cx="76.43" cy="27.02" r="0.4" fill="#46C08B" opacity="0.55"/><circle cx="70.15" cy="79.86" r="0.3" fill="#7FE0C0" opacity="0.94"/><circle cx="33.76" cy="51.94" r="0.25" fill="#20B2A2" opacity="0.55"/><circle cx="56.40" cy="80.76" r="0.3" fill="#7FE0C0" opacity="0.74"/><circle cx="57.06" cy="92.76" r="0.3" fill="#7FE0C0" opacity="0.93"/><circle cx="51.45" cy="19.20" r="0.35" fill="#2F6FD6" opacity="0.76"/><circle cx="47.32" cy="90.76" r="0.4" fill="#1FA0C8" opacity="0.94"/><circle cx="56.06" cy="5.81" r="0.25" fill="#20B2A2" opacity="0.66"/><circle cx="57.90" cy="88.04" r="0.3" fill="#7FE0C0" opacity="0.87"/><circle cx="63.77" cy="2.28" r="0.35" fill="#46C08B" opacity="0.86"/><circle cx="53.46" cy="94.42" r="0.25" fill="#1FA0C8" opacity="0.92"/><circle cx="50.87" cy="90.13" r="0.4" fill="#20B2A2" opacity="0.74"/><circle cx="55.40" cy="11.09" r="0.3" fill="#2F6FD6" opacity="0.52"/><circle cx="48.50" cy="21.44" r="0.5" fill="#2F6FD6" opacity="0.52"/><circle cx="29.95" cy="40.27" r="0.3" fill="#20B2A2" opacity="0.35"/><circle cx="91.16" cy="73.45" r="0.35" fill="#2F6FD6" opacity="0.75"/><circle cx="23.87" cy="53.28" r="0.4" fill="#2F6FD6" opacity="0.40"/><circle cx="7.75" cy="48.41" r="0.25" fill="#7FE0C0" opacity="0.86"/><circle cx="36.86" cy="21.03" r="0.4" fill="#2F6FD6" opacity="0.49"/><circle cx="10.82" cy="51.43" r="0.35" fill="#7FE0C0" opacity="0.56"/><circle cx="41.56" cy="73.12" r="0.4" fill="#46C08B" opacity="0.78"/><circle cx="35.47" cy="15.17" r="0.25" fill="#7FE0C0" opacity="0.78"/><circle cx="59.90" cy="4.94" r="0.25" fill="#46C08B" opacity="0.78"/><circle cx="38.57" cy="3.35" r="0.4" fill="#2F6FD6" opacity="0.50"/><circle cx="53.75" cy="22.78" r="0.6" fill="#2F6FD6" opacity="0.48"/><circle cx="29.30" cy="28.57" r="0.5" fill="#1FA0C8" opacity="0.84"/><circle cx="6.51" cy="34.16" r="0.25" fill="#20B2A2" opacity="0.52"/><circle cx="79.51" cy="74.29" r="0.35" fill="#2F6FD6" opacity="0.96"/><circle cx="24.17" cy="18.65" r="0.4" fill="#46C08B" opacity="0.89"/><circle cx="30.75" cy="31.53" r="0.3" fill="#20B2A2" opacity="0.79"/><circle cx="24.50" cy="67.97" r="0.4" fill="#46C08B" opacity="0.74"/><circle cx="76.03" cy="55.37" r="0.25" fill="#46C08B" opacity="0.63"/><circle cx="66.53" cy="16.66" r="0.5" fill="#20B2A2" opacity="0.44"/><circle cx="70.08" cy="8.08" r="0.4" fill="#7FE0C0" opacity="0.66"/><circle cx="43.66" cy="6.56" r="0.5" fill="#20B2A2" opacity="0.80"/><circle cx="15.38" cy="21.87" r="0.25" fill="#20B2A2" opacity="0.52"/><circle cx="28.25" cy="19.78" r="0.25" fill="#20B2A2" opacity="0.71"/><circle cx="59.96" cy="9.68" r="0.25" fill="#20B2A2" opacity="0.75"/><circle cx="16.72" cy="41.71" r="0.35" fill="#1FA0C8" opacity="0.71"/><circle cx="6.47" cy="46.31" r="0.5" fill="#2F6FD6" opacity="0.81"/><circle cx="36.61" cy="1.85" r="0.3" fill="#46C08B" opacity="0.72"/><circle cx="64.14" cy="91.64" r="0.25" fill="#7FE0C0" opacity="0.44"/><circle cx="35.98" cy="9.38" r="0.35" fill="#1FA0C8" opacity="0.41"/><circle cx="75.77" cy="26.69" r="0.4" fill="#20B2A2" opacity="0.98"/><circle cx="19.43" cy="35.77" r="0.5" fill="#2F6FD6" opacity="0.71"/><circle cx="73.90" cy="92.54" r="0.6" fill="#1FA0C8" opacity="0.99"/><circle cx="81.19" cy="80.29" r="0.25" fill="#1FA0C8" opacity="0.54"/><circle cx="19.75" cy="34.92" r="0.3" fill="#2F6FD6" opacity="0.47"/><circle cx="4.72" cy="63.35" r="0.4" fill="#20B2A2" opacity="0.47"/><circle cx="32.83" cy="18.18" r="0.6" fill="#2F6FD6" opacity="0.94"/><circle cx="64.36" cy="9.17" r="0.25" fill="#7FE0C0" opacity="0.45"/><circle cx="75.27" cy="81.75" r="0.4" fill="#7FE0C0" opacity="0.43"/><circle cx="19.34" cy="46.17" r="0.35" fill="#1FA0C8" opacity="0.51"/><circle cx="54.73" cy="28.16" r="0.6" fill="#20B2A2" opacity="0.79"/><circle cx="11.06" cy="50.60" r="0.25" fill="#7FE0C0" opacity="0.66"/><circle cx="91.46" cy="24.79" r="0.5" fill="#1FA0C8" opacity="0.84"/><circle cx="90.97" cy="48.61" r="0.6" fill="#7FE0C0" opacity="0.62"/><circle cx="70.85" cy="68.30" r="0.5" fill="#2F6FD6" opacity="0.56"/><circle cx="82.73" cy="27.54" r="0.35" fill="#1FA0C8" opacity="0.94"/><circle cx="87.06" cy="23.12" r="0.6" fill="#1FA0C8" opacity="0.59"/><circle cx="34.41" cy="93.52" r="0.5" fill="#20B2A2" opacity="0.92"/><circle cx="23.36" cy="59.22" r="0.5" fill="#46C08B" opacity="0.92"/><circle cx="82.15" cy="75.06" r="0.3" fill="#7FE0C0" opacity="0.70"/><circle cx="85.78" cy="16.29" r="0.6" fill="#1FA0C8" opacity="0.98"/><circle cx="7.68" cy="72.78" r="0.3" fill="#7FE0C0" opacity="0.49"/><circle cx="85.13" cy="25.61" r="0.25" fill="#20B2A2" opacity="0.69"/><circle cx="22.63" cy="43.41" r="0.4" fill="#20B2A2" opacity="0.35"/><circle cx="95.31" cy="56.86" r="0.3" fill="#7FE0C0" opacity="0.39"/><circle cx="12.24" cy="78.44" r="0.35" fill="#20B2A2" opacity="0.80"/><circle cx="71.02" cy="54.16" r="0.35" fill="#7FE0C0" opacity="0.55"/><circle cx="54.89" cy="21.11" r="0.4" fill="#20B2A2" opacity="0.92"/><circle cx="81.61" cy="33.30" r="0.25" fill="#1FA0C8" opacity="0.48"/><circle cx="98.32" cy="54.88" r="0.6" fill="#2F6FD6" opacity="0.92"/><circle cx="28.31" cy="26.19" r="0.3" fill="#46C08B" opacity="0.97"/><circle cx="34.67" cy="91.69" r="0.35" fill="#1FA0C8" opacity="0.97"/><circle cx="38.96" cy="3.17" r="0.3" fill="#7FE0C0" opacity="0.57"/><circle cx="69.05" cy="84.33" r="0.35" fill="#20B2A2" opacity="0.43"/><circle cx="43.50" cy="15.77" r="0.5" fill="#1FA0C8" opacity="0.78"/><circle cx="29.99" cy="17.57" r="0.25" fill="#20B2A2" opacity="0.73"/><circle cx="89.35" cy="19.67" r="0.3" fill="#1FA0C8" opacity="0.78"/><circle cx="35.84" cy="25.06" r="0.4" fill="#7FE0C0" opacity="0.99"/><circle cx="93.67" cy="71.84" r="0.25" fill="#2F6FD6" opacity="0.35"/><circle cx="49.80" cy="85.39" r="0.5" fill="#1FA0C8" opacity="0.41"/><circle cx="68.49" cy="96.28" r="0.3" fill="#2F6FD6" opacity="0.53"/><circle cx="54.73" cy="31.75" r="0.3" fill="#46C08B" opacity="0.99"/><circle cx="87.96" cy="28.00" r="0.5" fill="#7FE0C0" opacity="0.60"/><circle cx="71.25" cy="59.04" r="0.6" fill="#1FA0C8" opacity="0.94"/><circle cx="59.17" cy="6.39" r="0.5" fill="#2F6FD6" opacity="0.54"/><circle cx="4.81" cy="40.88" r="0.5" fill="#20B2A2" opacity="0.86"/><circle cx="24.82" cy="60.79" r="0.6" fill="#1FA0C8" opacity="0.64"/><circle cx="61.96" cy="4.75" r="0.3" fill="#2F6FD6" opacity="0.52"/><circle cx="21.07" cy="34.07" r="0.4" fill="#20B2A2" opacity="0.52"/><circle cx="40.46" cy="7.68" r="0.5" fill="#20B2A2" opacity="0.64"/><circle cx="21.47" cy="26.90" r="0.5" fill="#7FE0C0" opacity="0.67"/><circle cx="43.04" cy="9.18" r="0.25" fill="#20B2A2" opacity="0.40"/><circle cx="8.75" cy="38.51" r="0.6" fill="#20B2A2" opacity="0.50"/><circle cx="30.01" cy="60.13" r="0.6" fill="#2F6FD6" opacity="0.55"/><circle cx="58.82" cy="4.85" r="0.5" fill="#2F6FD6" opacity="0.67"/><circle cx="49.06" cy="80.78" r="0.3" fill="#2F6FD6" opacity="0.67"/><circle cx="93.40" cy="67.54" r="0.4" fill="#20B2A2" opacity="0.65"/><circle cx="93.76" cy="37.94" r="0.3" fill="#2F6FD6" opacity="0.67"/><circle cx="80.63" cy="89.28" r="0.4" fill="#46C08B" opacity="0.69"/><circle cx="41.20" cy="55.60" r="0.5" fill="#7FE0C0" opacity="0.44"/><circle cx="8.11" cy="57.48" r="0.25" fill="#2F6FD6" opacity="0.98"/><circle cx="49.33" cy="83.37" r="0.5" fill="#7FE0C0" opacity="0.91"/><circle cx="86.84" cy="33.35" r="0.35" fill="#2F6FD6" opacity="0.55"/><circle cx="67.56" cy="77.83" r="0.5" fill="#46C08B" opacity="0.77"/><circle cx="8.08" cy="31.10" r="0.5" fill="#20B2A2" opacity="0.95"/><circle cx="18.36" cy="75.20" r="0.3" fill="#46C08B" opacity="0.60"/><circle cx="31.17" cy="76.83" r="0.3" fill="#20B2A2" opacity="0.87"/><circle cx="16.91" cy="73.97" r="0.5" fill="#1FA0C8" opacity="0.65"/><circle cx="9.39" cy="52.50" r="0.6" fill="#7FE0C0" opacity="0.79"/><circle cx="26.03" cy="71.68" r="0.25" fill="#1FA0C8" opacity="0.38"/><circle cx="44.19" cy="87.39" r="0.25" fill="#1FA0C8" opacity="0.69"/><circle cx="12.08" cy="32.91" r="0.6" fill="#1FA0C8" opacity="0.81"/><circle cx="75.08" cy="59.43" r="0.6" fill="#1FA0C8" opacity="0.96"/><circle cx="51.66" cy="78.90" r="0.25" fill="#1FA0C8" opacity="0.36"/><circle cx="4.70" cy="64.74" r="0.4" fill="#2F6FD6" opacity="0.56"/><circle cx="35.57" cy="92.38" r="0.5" fill="#46C08B" opacity="0.50"/><circle cx="18.56" cy="47.25" r="0.3" fill="#1FA0C8" opacity="0.37"/><circle cx="11.21" cy="55.24" r="0.6" fill="#2F6FD6" opacity="0.44"/><circle cx="44.70" cy="15.87" r="0.6" fill="#20B2A2" opacity="0.60"/><circle cx="3.57" cy="39.63" r="0.4" fill="#7FE0C0" opacity="0.61"/><circle cx="24.31" cy="82.85" r="0.25" fill="#1FA0C8" opacity="0.54"/><circle cx="77.77" cy="83.70" r="0.25" fill="#7FE0C0" opacity="0.84"/><circle cx="65.43" cy="10.13" r="0.6" fill="#46C08B" opacity="0.54"/><circle cx="60.30" cy="97.76" r="0.6" fill="#46C08B" opacity="0.58"/><circle cx="83.43" cy="13.67" r="0.3" fill="#1FA0C8" opacity="0.86"/><circle cx="26.84" cy="61.31" r="0.4" fill="#7FE0C0" opacity="0.67"/><circle cx="31.88" cy="83.87" r="0.4" fill="#20B2A2" opacity="0.81"/><circle cx="25.35" cy="67.33" r="0.4" fill="#1FA0C8" opacity="0.85"/><circle cx="52.86" cy="94.61" r="0.25" fill="#7FE0C0" opacity="0.83"/><circle cx="3.35" cy="56.40" r="0.35" fill="#2F6FD6" opacity="0.81"/><circle cx="81.09" cy="31.49" r="0.4" fill="#46C08B" opacity="0.43"/><circle cx="43.28" cy="98.29" r="0.4" fill="#2F6FD6" opacity="0.67"/><circle cx="43.09" cy="14.76" r="0.35" fill="#46C08B" opacity="0.40"/><circle cx="79.06" cy="26.50" r="0.5" fill="#20B2A2" opacity="0.54"/><circle cx="16.90" cy="79.40" r="0.35" fill="#1FA0C8" opacity="0.97"/><circle cx="44.90" cy="31.45" r="0.3" fill="#46C08B" opacity="0.85"/><circle cx="12.83" cy="73.28" r="0.4" fill="#46C08B" opacity="0.39"/><circle cx="84.57" cy="17.43" r="0.4" fill="#7FE0C0" opacity="0.98"/><circle cx="63.38" cy="65.35" r="0.5" fill="#7FE0C0" opacity="0.53"/><circle cx="87.37" cy="44.56" r="0.3" fill="#1FA0C8" opacity="0.74"/><circle cx="35.85" cy="19.84" r="0.3" fill="#2F6FD6" opacity="0.69"/><circle cx="99.71" cy="51.09" r="0.5" fill="#2F6FD6" opacity="0.67"/><circle cx="61.08" cy="27.72" r="0.6" fill="#1FA0C8" opacity="0.98"/><circle cx="77.54" cy="71.06" r="0.25" fill="#20B2A2" opacity="0.55"/><circle cx="32.44" cy="8.30" r="0.3" fill="#20B2A2" opacity="0.89"/><circle cx="36.24" cy="15.70" r="0.5" fill="#7FE0C0" opacity="0.54"/><circle cx="49.77" cy="14.57" r="0.5" fill="#20B2A2" opacity="0.67"/><circle cx="39.72" cy="13.61" r="0.5" fill="#46C08B" opacity="0.83"/><circle cx="70.61" cy="4.61" r="0.6" fill="#7FE0C0" opacity="0.55"/><circle cx="32.11" cy="12.44" r="0.25" fill="#7FE0C0" opacity="0.46"/><circle cx="95.43" cy="65.86" r="0.35" fill="#7FE0C0" opacity="0.61"/><circle cx="27.31" cy="24.33" r="0.35" fill="#1FA0C8" opacity="0.82"/><circle cx="69.39" cy="25.34" r="0.3" fill="#20B2A2" opacity="0.90"/><circle cx="12.43" cy="70.47" r="0.6" fill="#1FA0C8" opacity="0.43"/><circle cx="83.22" cy="83.31" r="0.4" fill="#1FA0C8" opacity="0.75"/><circle cx="63.34" cy="80.64" r="0.25" fill="#20B2A2" opacity="0.66"/><circle cx="45.40" cy="84.51" r="0.35" fill="#7FE0C0" opacity="0.76"/><circle cx="33.45" cy="15.23" r="0.3" fill="#46C08B" opacity="0.38"/><circle cx="66.65" cy="95.16" r="0.35" fill="#46C08B" opacity="0.83"/><circle cx="82.21" cy="28.03" r="0.5" fill="#20B2A2" opacity="0.91"/><circle cx="36.14" cy="85.53" r="0.6" fill="#7FE0C0" opacity="0.53"/><circle cx="11.68" cy="74.93" r="0.3" fill="#7FE0C0" opacity="0.99"/><circle cx="59.35" cy="93.89" r="0.35" fill="#20B2A2" opacity="0.87"/><circle cx="70.08" cy="15.46" r="0.5" fill="#1FA0C8" opacity="0.96"/><circle cx="5.98" cy="69.83" r="0.3" fill="#46C08B" opacity="0.56"/><circle cx="18.32" cy="35.38" r="0.35" fill="#1FA0C8" opacity="0.76"/><circle cx="81.98" cy="67.84" r="0.3" fill="#1FA0C8" opacity="0.59"/><circle cx="74.69" cy="84.72" r="0.25" fill="#1FA0C8" opacity="0.93"/><circle cx="94.78" cy="51.13" r="0.35" fill="#20B2A2" opacity="0.66"/><circle cx="8.12" cy="77.11" r="0.25" fill="#2F6FD6" opacity="0.62"/><circle cx="86.24" cy="63.73" r="0.5" fill="#2F6FD6" opacity="0.75"/><circle cx="62.88" cy="81.73" r="0.35" fill="#7FE0C0" opacity="0.91"/><circle cx="89.93" cy="34.42" r="0.25" fill="#46C08B" opacity="0.46"/><circle cx="2.25" cy="38.06" r="0.6" fill="#1FA0C8" opacity="0.40"/><circle cx="33.16" cy="43.85" r="0.25" fill="#46C08B" opacity="0.68"/><circle cx="94.55" cy="68.85" r="0.35" fill="#2F6FD6" opacity="0.36"/><circle cx="51.08" cy="84.68" r="0.6" fill="#1FA0C8" opacity="0.67"/><circle cx="72.07" cy="8.42" r="0.25" fill="#7FE0C0" opacity="0.96"/><circle cx="39.20" cy="12.60" r="0.35" fill="#2F6FD6" opacity="0.93"/><circle cx="34.21" cy="41.73" r="0.3" fill="#1FA0C8" opacity="0.56"/><circle cx="43.04" cy="90.87" r="0.35" fill="#7FE0C0" opacity="0.76"/><circle cx="43.14" cy="86.95" r="0.6" fill="#46C08B" opacity="0.56"/><circle cx="57.86" cy="83.79" r="0.3" fill="#20B2A2" opacity="0.49"/><circle cx="32.03" cy="11.66" r="0.3" fill="#20B2A2" opacity="0.58"/><circle cx="32.74" cy="73.66" r="0.4" fill="#7FE0C0" opacity="0.36"/><circle cx="16.02" cy="73.61" r="0.35" fill="#20B2A2" opacity="0.97"/><circle cx="57.87" cy="65.34" r="0.25" fill="#46C08B" opacity="0.84"/><circle cx="31.31" cy="88.75" r="0.4" fill="#20B2A2" opacity="0.98"/><circle cx="57.85" cy="9.45" r="0.3" fill="#46C08B" opacity="0.88"/><circle cx="92.51" cy="35.50" r="0.35" fill="#1FA0C8" opacity="0.92"/><circle cx="91.80" cy="52.65" r="0.6" fill="#7FE0C0" opacity="0.76"/><circle cx="95.82" cy="66.60" r="0.5" fill="#7FE0C0" opacity="0.75"/><circle cx="16.90" cy="15.36" r="0.5" fill="#46C08B" opacity="0.98"/><circle cx="48.01" cy="22.07" r="0.6" fill="#7FE0C0" opacity="0.64"/><circle cx="20.53" cy="76.10" r="0.3" fill="#2F6FD6" opacity="0.59"/><circle cx="7.30" cy="45.90" r="0.25" fill="#7FE0C0" opacity="0.69"/><circle cx="16.63" cy="27.82" r="0.5" fill="#1FA0C8" opacity="0.39"/><circle cx="20.79" cy="55.82" r="0.35" fill="#1FA0C8" opacity="0.83"/><circle cx="19.01" cy="56.13" r="0.5" fill="#20B2A2" opacity="0.61"/><circle cx="86.96" cy="22.20" r="0.25" fill="#20B2A2" opacity="0.50"/><circle cx="64.01" cy="4.62" r="0.5" fill="#1FA0C8" opacity="0.51"/><circle cx="66.14" cy="32.83" r="0.6" fill="#2F6FD6" opacity="0.57"/><circle cx="4.81" cy="63.42" r="0.5" fill="#7FE0C0" opacity="0.36"/><circle cx="44.09" cy="81.39" r="0.6" fill="#46C08B" opacity="0.51"/><circle cx="59.83" cy="8.63" r="0.4" fill="#46C08B" opacity="0.92"/><circle cx="78.83" cy="12.85" r="0.5" fill="#46C08B" opacity="0.98"/><circle cx="77.19" cy="88.31" r="0.35" fill="#1FA0C8" opacity="0.47"/><circle cx="38.58" cy="66.62" r="0.3" fill="#46C08B" opacity="0.89"/><circle cx="20.43" cy="24.14" r="0.25" fill="#2F6FD6" opacity="0.90"/><circle cx="9.57" cy="52.76" r="0.25" fill="#20B2A2" opacity="0.99"/><circle cx="32.96" cy="88.43" r="0.6" fill="#2F6FD6" opacity="0.98"/><circle cx="9.41" cy="68.86" r="0.25" fill="#1FA0C8" opacity="0.88"/><circle cx="95.00" cy="34.09" r="0.6" fill="#20B2A2" opacity="0.74"/><circle cx="71.66" cy="72.50" r="0.6" fill="#46C08B" opacity="0.73"/><circle cx="71.24" cy="68.97" r="0.35" fill="#1FA0C8" opacity="0.75"/><circle cx="86.10" cy="51.83" r="0.25" fill="#1FA0C8" opacity="0.80"/><circle cx="55.97" cy="2.24" r="0.3" fill="#1FA0C8" opacity="0.45"/><circle cx="66.86" cy="14.27" r="0.4" fill="#20B2A2" opacity="0.53"/><circle cx="88.71" cy="35.14" r="0.35" fill="#7FE0C0" opacity="0.68"/><circle cx="20.50" cy="33.96" r="0.35" fill="#1FA0C8" opacity="0.43"/><circle cx="93.50" cy="73.26" r="0.6" fill="#7FE0C0" opacity="0.65"/><circle cx="48.38" cy="11.51" r="0.5" fill="#46C08B" opacity="0.49"/><circle cx="31.03" cy="82.88" r="0.5" fill="#1FA0C8" opacity="0.64"/><circle cx="37.90" cy="16.44" r="0.6" fill="#46C08B" opacity="0.75"/><circle cx="76.42" cy="78.92" r="0.35" fill="#1FA0C8" opacity="0.60"/><circle cx="65.95" cy="16.38" r="0.5" fill="#46C08B" opacity="0.42"/><circle cx="60.19" cy="88.91" r="0.35" fill="#46C08B" opacity="0.36"/><circle cx="27.76" cy="10.04" r="0.35" fill="#46C08B" opacity="0.99"/><circle cx="74.99" cy="87.12" r="0.25" fill="#7FE0C0" opacity="0.59"/><circle cx="8.89" cy="55.29" r="0.6" fill="#20B2A2" opacity="0.74"/><circle cx="99.62" cy="47.69" r="0.4" fill="#20B2A2" opacity="0.63"/><circle cx="36.55" cy="7.67" r="0.25" fill="#7FE0C0" opacity="0.39"/><circle cx="61.14" cy="6.89" r="0.3" fill="#2F6FD6" opacity="0.69"/><circle cx="27.75" cy="73.72" r="0.3" fill="#46C08B" opacity="0.69"/><circle cx="89.86" cy="73.08" r="0.3" fill="#2F6FD6" opacity="0.97"/><circle cx="88.89" cy="23.97" r="0.6" fill="#7FE0C0" opacity="0.88"/><circle cx="84.06" cy="81.86" r="0.4" fill="#1FA0C8" opacity="0.45"/><circle cx="95.08" cy="33.62" r="0.25" fill="#7FE0C0" opacity="0.42"/><circle cx="8.82" cy="41.16" r="0.25" fill="#46C08B" opacity="0.85"/><circle cx="14.08" cy="48.35" r="0.25" fill="#20B2A2" opacity="0.39"/><circle cx="74.23" cy="65.03" r="0.5" fill="#1FA0C8" opacity="0.55"/><circle cx="50.95" cy="96.65" r="0.4" fill="#20B2A2" opacity="0.65"/><circle cx="70.78" cy="87.90" r="0.25" fill="#46C08B" opacity="0.65"/><circle cx="2.83" cy="48.89" r="0.3" fill="#2F6FD6" opacity="0.98"/><circle cx="27.22" cy="29.13" r="0.6" fill="#7FE0C0" opacity="0.98"/><circle cx="56.27" cy="96.96" r="0.25" fill="#7FE0C0" opacity="0.83"/><circle cx="20.54" cy="44.17" r="0.25" fill="#7FE0C0" opacity="0.61"/><circle cx="85.12" cy="42.43" r="0.6" fill="#46C08B" opacity="0.85"/><circle cx="38.20" cy="86.74" r="0.3" fill="#46C08B" opacity="0.52"/><circle cx="11.07" cy="71.65" r="0.4" fill="#2F6FD6" opacity="0.48"/><circle cx="5.17" cy="29.62" r="0.5" fill="#46C08B" opacity="0.95"/><circle cx="38.19" cy="86.87" r="0.6" fill="#20B2A2" opacity="0.74"/><circle cx="15.71" cy="66.33" r="0.4" fill="#7FE0C0" opacity="0.60"/><circle cx="77.46" cy="74.77" r="0.35" fill="#46C08B" opacity="0.89"/><circle cx="27.58" cy="70.49" r="0.35" fill="#20B2A2" opacity="0.61"/><circle cx="39.69" cy="6.32" r="0.25" fill="#7FE0C0" opacity="0.55"/><circle cx="1.07" cy="43.86" r="0.5" fill="#46C08B" opacity="0.67"/><circle cx="18.23" cy="28.91" r="0.25" fill="#2F6FD6" opacity="0.35"/><circle cx="50.88" cy="87.66" r="0.5" fill="#1FA0C8" opacity="0.80"/><circle cx="52.59" cy="17.56" r="0.25" fill="#7FE0C0" opacity="0.55"/><circle cx="51.48" cy="22.27" r="0.35" fill="#46C08B" opacity="0.38"/><circle cx="22.34" cy="32.58" r="0.4" fill="#1FA0C8" opacity="0.77"/><circle cx="41.32" cy="87.95" r="0.6" fill="#7FE0C0" opacity="0.41"/><circle cx="74.40" cy="6.61" r="0.35" fill="#20B2A2" opacity="0.37"/><circle cx="61.28" cy="4.03" r="0.6" fill="#7FE0C0" opacity="0.53"/><circle cx="34.64" cy="34.69" r="0.5" fill="#1FA0C8" opacity="0.44"/><circle cx="93.77" cy="56.19" r="0.6" fill="#2F6FD6" opacity="0.84"/><circle cx="68.94" cy="12.12" r="0.4" fill="#46C08B" opacity="0.62"/><circle cx="76.69" cy="65.44" r="0.6" fill="#7FE0C0" opacity="0.84"/><circle cx="29.54" cy="8.45" r="0.25" fill="#46C08B" opacity="0.64"/><circle cx="95.83" cy="37.18" r="0.35" fill="#2F6FD6" opacity="0.78"/><circle cx="36.74" cy="6.43" r="0.4" fill="#2F6FD6" opacity="0.55"/><circle cx="68.57" cy="29.70" r="0.25" fill="#2F6FD6" opacity="0.62"/><circle cx="77.54" cy="40.56" r="0.3" fill="#7FE0C0" opacity="0.92"/><circle cx="81.11" cy="26.37" r="0.4" fill="#7FE0C0" opacity="0.48"/><circle cx="34.74" cy="11.76" r="0.4" fill="#7FE0C0" opacity="0.68"/><circle cx="48.71" cy="23.11" r="0.3" fill="#1FA0C8" opacity="0.85"/><circle cx="31.68" cy="76.50" r="0.3" fill="#7FE0C0" opacity="0.77"/><circle cx="7.07" cy="44.58" r="0.4" fill="#2F6FD6" opacity="0.64"/><circle cx="20.00" cy="87.08" r="0.5" fill="#7FE0C0" opacity="0.45"/><circle cx="38.06" cy="15.19" r="0.3" fill="#1FA0C8" opacity="0.76"/><circle cx="9.13" cy="29.18" r="0.35" fill="#1FA0C8" opacity="0.95"/><circle cx="42.00" cy="12.59" r="0.4" fill="#46C08B" opacity="0.94"/><circle cx="92.13" cy="43.53" r="0.5" fill="#7FE0C0" opacity="0.65"/><circle cx="60.82" cy="75.55" r="0.5" fill="#1FA0C8" opacity="0.42"/><circle cx="74.24" cy="83.48" r="0.6" fill="#20B2A2" opacity="0.58"/><circle cx="28.84" cy="86.80" r="0.3" fill="#1FA0C8" opacity="0.64"/><circle cx="88.52" cy="77.14" r="0.3" fill="#20B2A2" opacity="0.49"/><circle cx="46.26" cy="2.16" r="0.35" fill="#20B2A2" opacity="0.43"/><circle cx="84.77" cy="24.54" r="0.35" fill="#1FA0C8" opacity="0.80"/><circle cx="56.36" cy="23.58" r="0.35" fill="#1FA0C8" opacity="0.75"/><circle cx="32.88" cy="71.23" r="0.3" fill="#1FA0C8" opacity="0.70"/><circle cx="39.84" cy="93.57" r="0.5" fill="#7FE0C0" opacity="0.44"/><circle cx="74.19" cy="54.46" r="0.35" fill="#20B2A2" opacity="0.96"/><circle cx="75.79" cy="90.70" r="0.5" fill="#2F6FD6" opacity="0.91"/><circle cx="57.99" cy="25.54" r="0.3" fill="#2F6FD6" opacity="0.70"/><circle cx="47.12" cy="96.53" r="0.25" fill="#1FA0C8" opacity="0.63"/><circle cx="7.13" cy="38.26" r="0.4" fill="#1FA0C8" opacity="0.64"/><circle cx="57.88" cy="86.49" r="0.6" fill="#2F6FD6" opacity="0.68"/><circle cx="84.45" cy="19.83" r="0.25" fill="#46C08B" opacity="0.97"/><circle cx="88.45" cy="30.90" r="0.6" fill="#46C08B" opacity="0.40"/><circle cx="25.53" cy="39.33" r="0.25" fill="#1FA0C8" opacity="0.48"/><circle cx="75.14" cy="23.94" r="0.25" fill="#46C08B" opacity="0.97"/><circle cx="25.06" cy="65.11" r="0.3" fill="#2F6FD6" opacity="0.99"/><circle cx="11.03" cy="66.35" r="0.6" fill="#2F6FD6" opacity="0.47"/><circle cx="15.61" cy="20.62" r="0.3" fill="#46C08B" opacity="0.92"/><circle cx="10.84" cy="53.48" r="0.25" fill="#46C08B" opacity="0.80"/><circle cx="91.95" cy="42.69" r="0.5" fill="#1FA0C8" opacity="0.41"/><circle cx="56.57" cy="83.74" r="0.35" fill="#2F6FD6" opacity="0.96"/><circle cx="93.97" cy="27.71" r="0.4" fill="#46C08B" opacity="0.96"/><circle cx="62.29" cy="8.14" r="0.6" fill="#2F6FD6" opacity="0.72"/><circle cx="67.65" cy="81.87" r="0.5" fill="#46C08B" opacity="0.45"/><circle cx="41.94" cy="75.97" r="0.35" fill="#46C08B" opacity="0.97"/><circle cx="73.24" cy="81.62" r="0.3" fill="#2F6FD6" opacity="0.80"/><circle cx="54.99" cy="2.50" r="0.6" fill="#46C08B" opacity="0.88"/><circle cx="86.77" cy="40.11" r="0.3" fill="#20B2A2" opacity="0.98"/><circle cx="30.00" cy="83.56" r="0.35" fill="#20B2A2" opacity="0.60"/><circle cx="20.29" cy="32.27" r="0.5" fill="#2F6FD6" opacity="0.82"/><circle cx="6.91" cy="62.55" r="0.3" fill="#7FE0C0" opacity="0.96"/><circle cx="68.22" cy="75.07" r="0.35" fill="#20B2A2" opacity="0.64"/><circle cx="26.74" cy="90.56" r="0.3" fill="#2F6FD6" opacity="0.79"/><circle cx="15.82" cy="45.08" r="0.35" fill="#46C08B" opacity="0.72"/><circle cx="53.50" cy="81.22" r="0.35" fill="#20B2A2" opacity="0.68"/><circle cx="61.24" cy="6.57" r="0.5" fill="#2F6FD6" opacity="0.41"/><circle cx="56.81" cy="83.25" r="0.4" fill="#20B2A2" opacity="0.71"/><circle cx="26.40" cy="79.86" r="0.25" fill="#7FE0C0" opacity="0.99"/><circle cx="6.32" cy="74.33" r="0.6" fill="#1FA0C8" opacity="0.86"/><circle cx="63.34" cy="98.08" r="0.35" fill="#46C08B" opacity="0.72"/><circle cx="66.97" cy="12.94" r="0.25" fill="#46C08B" opacity="0.38"/><circle cx="85.17" cy="65.25" r="0.3" fill="#20B2A2" opacity="0.44"/><circle cx="19.83" cy="51.36" r="0.3" fill="#1FA0C8" opacity="0.96"/><circle cx="69.03" cy="71.93" r="0.6" fill="#46C08B" opacity="0.56"/><circle cx="70.92" cy="73.94" r="0.6" fill="#7FE0C0" opacity="0.50"/><circle cx="44.49" cy="12.44" r="0.35" fill="#46C08B" opacity="0.45"/><circle cx="42.35" cy="0.82" r="0.6" fill="#1FA0C8" opacity="0.38"/><circle cx="18.21" cy="31.88" r="0.35" fill="#2F6FD6" opacity="0.69"/><circle cx="5.77" cy="66.73" r="0.5" fill="#46C08B" opacity="0.52"/><circle cx="54.25" cy="74.73" r="0.25" fill="#2F6FD6" opacity="0.95"/><circle cx="80.73" cy="43.16" r="0.6" fill="#1FA0C8" opacity="0.72"/><circle cx="82.06" cy="24.53" r="0.5" fill="#2F6FD6" opacity="0.65"/><circle cx="0.17" cy="53.62" r="0.25" fill="#7FE0C0" opacity="0.47"/><circle cx="99.11" cy="57.60" r="0.5" fill="#46C08B" opacity="0.61"/><circle cx="83.86" cy="59.95" r="0.4" fill="#20B2A2" opacity="0.83"/><circle cx="98.89" cy="57.51" r="0.4" fill="#7FE0C0" opacity="0.87"/><circle cx="90.29" cy="66.88" r="0.25" fill="#46C08B" opacity="0.47"/><circle cx="80.06" cy="44.64" r="0.35" fill="#2F6FD6" opacity="0.52"/><circle cx="33.73" cy="10.55" r="0.35" fill="#1FA0C8" opacity="0.76"/><circle cx="68.91" cy="73.97" r="0.5" fill="#7FE0C0" opacity="0.73"/><circle cx="16.13" cy="29.42" r="0.35" fill="#7FE0C0" opacity="0.57"/></svg>
+            <div class="orbit__core"><img src="../assets/img/lauburu.svg" alt=""><span>INDAR<span class="grad">LAB</span></span></div>
+          </div>
+          <div class="orbit__node orbit__node--1">Интеграция данных</div><div class="orbit__node orbit__node--2">Статистический движок</div><div class="orbit__node orbit__node--3">Движок анализа узлов</div><div class="orbit__node orbit__node--4">Генеративный ИИ</div><div class="orbit__node orbit__node--5">Приложение</div><div class="orbit__node orbit__node--6">Безопасность данных</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9 · EVIDENCIA ============ -->
+    <section class="section section--tint" id="evidencia">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Научная база</p>
+          <h2 class="section__title">Научный подход. Решения, которые можно применить.</h2>
+          <p>INDARLAB родился из практики и науки: более шестнадцати лет работы тренером по физической подготовке и докторское исследование в области спортивных наук в Университете Страны Басков (UPV/EHU), посвящённое развитию юных футболистов.</p>
+          <p>Поэтому каждый результат сопровождается объяснением того, что он означает и что с ним можно сделать.</p>
+        </div>
+        <div class="founder">
+          <p class="founder__name">Noel Gil López, PhD</p>
+          <p class="founder__role">Основатель · Доктор спортивных наук</p>
+          <ul class="facts">
+            <li><strong>16+</strong> лет в спорте высших достижений</li>
+            <li><strong>MVP</strong> работает на реальных данных</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 · CONTACTO ============ -->
+    <section class="cta" id="contacto">
+      <div class="container cta__inner">
+        <h2>Хотите увидеть INDARLAB на данных вашего клуба?</h2>
+        <p>Мы покажем платформу и вместе с вами разберёмся, чем она может помочь вашей команде.</p>
+        <a class="btn btn--light" href="mailto:noelandresgil@hotmail.com?subject=INDARLAB%20demo">Запросить демо</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="brand brand--small">
+        <img src="../assets/img/lauburu.svg" alt="" class="brand__symbol">
+        <span class="brand__name">INDAR<span class="grad">LAB</span></span>
+      </a>
+      <p>Гипускоа, Страна Басков · <a href="mailto:noelandresgil@hotmail.com">noelandresgil@hotmail.com</a></p>
+      <p class="footer__legal">© <span id="year">2026</span> INDARLAB · <a href="#">Правовая информация</a> · <a href="#">Конфиденциальность</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=5"></script>
+</body>
+</html>
