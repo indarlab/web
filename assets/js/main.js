@@ -76,3 +76,16 @@ if (!reducir && 'IntersectionObserver' in window) {
   }), { threshold: 0.2 });
   videos.forEach(v => io.observe(v));
 }
+
+// Vídeo de fondo del hero: solo se descarga en pantallas grandes y si no se ha pedido "reducir movimiento"
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo) {
+  const sinMovimiento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ahorroDatos = navigator.connection && navigator.connection.saveData;
+  if (!sinMovimiento && !ahorroDatos && window.innerWidth > 720) {
+    const mp4 = heroVideo.canPlayType('video/mp4; codecs="avc1.42E01E"');
+    heroVideo.src = mp4 ? heroVideo.dataset.src : (heroVideo.dataset.srcWebm || heroVideo.dataset.src);
+    heroVideo.addEventListener('canplay', () => heroVideo.classList.add('is-ready'), { once: true });
+    heroVideo.play().catch(() => {});
+  }
+}
