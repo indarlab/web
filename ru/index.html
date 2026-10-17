@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css?v=6">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
         <a href="https://indarlab.onrender.com/" class="btn btn--small btn--ghost">Войти</a>
         <a href="#contacto" class="btn btn--small">Запросить демо</a>
       </nav>
-      <div class="lang" role="navigation" aria-label="Idioma / Language"><a href="../" lang="es" hreflang="es" title="Español">ES</a><a href="../en/" lang="en" hreflang="en" title="English">EN</a><a href="../ru/" lang="ru" hreflang="ru" aria-current="true" title="Русский">RU</a></div>
+      <div class="lang" role="navigation" aria-label="Hizkuntza / Idioma / Language"><a href="../" lang="es" hreflang="es" title="Español">ES</a><a href="../eu/" lang="eu" hreflang="eu" title="Euskara">EU</a><a href="../en/" lang="en" hreflang="en" title="English">EN</a><a href="../ru/" lang="ru" hreflang="ru" aria-current="true" title="Русский">RU</a></div>
       
     </div>
   </header>
@@ -194,6 +194,35 @@
       </div>
     </section>
 
+    <!-- ============ 3b · DEL CAMPO AL DATO (vídeo) ============ -->
+    <section class="field" id="campo">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">С поля — в данные</p>
+        <h2 class="section__title section__title--light">Тесты, которые вы уже проводите, превращаются в решения</h2>
+        <p class="field__lead">Спринт с фотоэлементами, стартовые ускорения, смены направления, прыжки… INDARLAB берёт то, что клуб уже измеряет, и превращает это в доказательную базу для каждого спортсмена и для группы.</p>
+        <div class="field__grid">
+          <figure class="field__item">
+            <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/sprint-fotocelulas.webp" aria-label="Спринт с фотоэлементами">
+              <source src="../assets/video/sprint-fotocelulas.mp4" type="video/mp4">
+            </video>
+            <figcaption>Спринт с фотоэлементами</figcaption>
+          </figure>
+          <figure class="field__item">
+            <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/salida-conos.webp" aria-label="Ускорение и старты">
+              <source src="../assets/video/salida-conos.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ускорение и старты</figcaption>
+          </figure>
+          <figure class="field__item field__item--chart">
+            <button class="zoomable" type="button" data-full="../assets/img/plataforma/distribucion-grupo.webp" aria-label="Увеличить: Реальный график: распределение группы в двух тестированиях">
+              <img src="../assets/img/plataforma/distribucion-grupo.webp" alt="Реальный график: распределение группы в двух тестированиях" loading="lazy" width="1410" height="606">
+            </button>
+            <figcaption>Результат: как меняется группа между тестированиями</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ 4 · BENEFICIOS POR PERFIL ============ -->
     <section class="section section--tint" id="para-quien">
       <div class="container">
@@ -234,15 +263,14 @@
         <p class="eyebrow eyebrow--light">Платформа</p>
         <h2 class="section__title section__title--light">От игрока к группе — на одной платформе</h2>
         <p class="section__lead">Индивидуальный и групповой анализ, взаимосвязи между показателями и генеративный искусственный интеллект — всё разработано INDARLAB.</p>
+        <p class="section__note">Реальные скриншоты платформы с анонимизированными данными. Нажмите на изображение, чтобы увеличить его.</p>
         <div class="platform">
           <article class="pcard">
-            <div class="pcard__media" aria-hidden="true">
-              <div class="scr scr--a">
-<div class="scr__bar"><span class="scr__logo"></span><b>Игрок 7 · U16</b><span class="scr__tag scr__tag--pos">+2,9 см</span></div>
-                <p class="scr__label">Прыжок CMJ · динамика по этапам</p>
-                <svg class="scr__chart" viewBox="0 0 300 110"><rect x="0" y="62" width="300" height="26" fill="rgba(47,111,214,.22)"/><line x1="0" x2="300" y1="75" y2="75" stroke="#2F6FD6" stroke-dasharray="4 4"/><polyline points="20,75 110,64 200,40 285,24" fill="none" stroke="#20B2A2" stroke-width="3"/><g fill="#20B2A2" stroke="#0E1A25" stroke-width="2"><circle cx="20" cy="75" r="5"/><circle cx="110" cy="64" r="5"/><circle cx="200" cy="40" r="5"/><circle cx="285" cy="24" r="5"/></g></svg>
-                <ul class="scr__rows"><li><span>CMJ</span><b>34,8 см</b><i class="ok"></i></li><li><span>Спринт 30 м</span><b>4,31 с</b><i class="ok"></i></li><li><span>Пик IMTP</span><b>2 340 Н</b><i class="ok"></i></li><li><span>COD 505</span><b>2,48 с</b><i class="warn"></i></li></ul>
-              </div>
+            <div class="pcard__media pcard__media--real">
+              <button class="zoomable" type="button" data-full="../assets/img/plataforma/respuesta-individual.webp" aria-label="Увеличить: Реальный график: изменение каждого спортсмена по сравнению со средним по группе">
+                <img class="scr scr--img scr--a" src="../assets/img/plataforma/respuesta-individual.webp" alt="Реальный график: изменение каждого спортсмена по сравнению со средним по группе" loading="lazy" width="1400" height="592">
+              </button>
+              <span class="pcard__tag">Реальный скриншот</span>
             </div>
             <div class="pcard__body">
               <h3>Индивидуальный анализ</h3>
@@ -250,13 +278,11 @@
             </div>
           </article>
           <article class="pcard">
-            <div class="pcard__media" aria-hidden="true">
-              <div class="scr scr--b">
-<div class="scr__bar"><span class="scr__logo"></span><b>U14 · Предсезонка → Январь</b><span class="scr__tag">24 спортсмена</span></div>
-                <p class="scr__label">Прогресс группы по качествам</p>
-                <ul class="scr__bars"><li><span>CMJ</span><div class="scr__track"><div class="scr__fill " style="width:92%"></div></div><b>92 %</b></li><li><span>Пик IMTP</span><div class="scr__track"><div class="scr__fill " style="width:85%"></div></div><b>85 %</b></li><li><span>Спринт 30 м</span><div class="scr__track"><div class="scr__fill " style="width:78%"></div></div><b>78 %</b></li><li><span>COD 505</span><div class="scr__track"><div class="scr__fill scr__fill--warn" style="width:41%"></div></div><b>41 %</b></li></ul>
-                <div class="scr__legend"><span><i class="ok"></i>Pre-PHV</span><span><i class="cy"></i>Circa-PHV</span><span><i class="bl"></i>Post-PHV</span></div>
-              </div>
+            <div class="pcard__media pcard__media--real">
+              <button class="zoomable" type="button" data-full="../assets/img/plataforma/probabilidad-mejora.webp" aria-label="Увеличить: Реальная таблица: вероятность улучшения группы по каждому показателю">
+                <img class="scr scr--img scr--b" src="../assets/img/plataforma/probabilidad-mejora.webp" alt="Реальная таблица: вероятность улучшения группы по каждому показателю" loading="lazy" width="1024" height="426">
+              </button>
+              <span class="pcard__tag">Реальный скриншот</span>
             </div>
             <div class="pcard__body">
               <h3>Групповой анализ</h3>
@@ -264,12 +290,11 @@
             </div>
           </article>
           <article class="pcard">
-            <div class="pcard__media" aria-hidden="true">
-              <div class="scr scr--a">
-<div class="scr__bar"><span class="scr__logo"></span><b>Корреляции изменений (Δ)</b><span class="scr__tag">U16</span></div>
-                <div class="scr__heat"><div class="scr__heat-y"><span>CMJ</span><span>Спринт</span><span>IMTP</span><span>COD</span><span>RSI</span></div><div class="scr__heat-grid"><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(32,178,162,0,76)">0,72</span><span style="background:rgba(32,178,162,0,45)">0,35</span><span style="background:rgba(228,87,46,0,32)">-0,20</span><span style="background:rgba(32,178,162,0,69)">0,64</span><span style="background:rgba(32,178,162,0,76)">0,72</span><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(32,178,162,0,30)">0,18</span><span style="background:rgba(228,87,46,0,50)">-0,41</span><span style="background:rgba(32,178,162,0,57)">0,50</span><span style="background:rgba(32,178,162,0,45)">0,35</span><span style="background:rgba(32,178,162,0,30)">0,18</span><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(32,178,162,0,22)">0,08</span><span style="background:rgba(32,178,162,0,68)">0,62</span><span style="background:rgba(228,87,46,0,32)">-0,20</span><span style="background:rgba(228,87,46,0,50)">-0,41</span><span style="background:rgba(32,178,162,0,22)">0,08</span><span style="background:rgba(32,178,162,1)">1</span><span style="background:rgba(228,87,46,0,28)">-0,15</span><span style="background:rgba(32,178,162,0,69)">0,64</span><span style="background:rgba(32,178,162,0,57)">0,50</span><span style="background:rgba(32,178,162,0,68)">0,62</span><span style="background:rgba(228,87,46,0,28)">-0,15</span><span style="background:rgba(32,178,162,1)">1</span></div></div>
-                <div class="scr__heat-x"><span>CMJ</span><span>Спринт</span><span>IMTP</span><span>COD</span><span>RSI</span></div>
-              </div>
+            <div class="pcard__media pcard__media--real">
+              <button class="zoomable" type="button" data-full="../assets/img/plataforma/correlaciones.webp" aria-label="Увеличить: Реальная тепловая карта: корреляции между изменениями">
+                <img class="scr scr--img scr--a" src="../assets/img/plataforma/correlaciones.webp" alt="Реальная тепловая карта: корреляции между изменениями" loading="lazy" width="1517" height="720">
+              </button>
+              <span class="pcard__tag">Реальный скриншот</span>
             </div>
             <div class="pcard__body">
               <h3>Корреляции</h3>
@@ -277,11 +302,11 @@
             </div>
           </article>
           <article class="pcard">
-            <div class="pcard__media" aria-hidden="true">
-              <div class="scr scr--b">
-<div class="scr__bar"><span class="scr__logo"></span><b>Карта узлов · U16</b><span class="scr__tag scr__tag--pos">Центральный узел: CMJ</span></div>
-                <svg class="scr__net" viewBox="0 0 300 160"><g stroke="rgba(32,178,162,.55)" stroke-width="1.5"><line x1="150" y1="62" x2="62" y2="30"/><line x1="150" y1="62" x2="240" y2="28"/><line x1="150" y1="62" x2="255" y2="100"/><line x1="150" y1="62" x2="60" y2="108"/><line x1="150" y1="62" x2="150" y2="135"/><line x1="150" y1="62" x2="105" y2="92"/><line x1="150" y1="62" x2="205" y2="92"/><line x1="240" y1="28" x2="255" y2="100"/><line x1="62" y1="30" x2="60" y2="108"/><line x1="105" y1="92" x2="150" y2="135"/><line x1="205" y1="92" x2="255" y2="100"/></g><circle cx="150" cy="62" r="16" fill="#46C08B"/><circle cx="62" cy="30" r="9" fill="#1FA0C8"/><circle cx="240" cy="28" r="10" fill="#20B2A2"/><circle cx="255" cy="100" r="8" fill="#2F6FD6"/><circle cx="60" cy="108" r="9" fill="#1FA0C8"/><circle cx="150" cy="135" r="7" fill="#2F6FD6"/><circle cx="105" cy="92" r="6" fill="#20B2A2"/><circle cx="205" cy="92" r="6" fill="#46C08B"/><g fill="#C9D6E2" font-size="10" font-weight="600" text-anchor="middle"><text x="150" y="41">CMJ</text><text x="62" y="16">Спринт</text><text x="240" y="13">IMTP</text><text x="255" y="87">RSI</text><text x="60" y="94">COD</text><text x="150" y="123">Макс. скорость</text></g></svg>
-              </div>
+            <div class="pcard__media pcard__media--real">
+              <button class="zoomable" type="button" data-full="../assets/img/plataforma/mapa-nodos.webp" aria-label="Увеличить: Реальная карта узлов адаптаций группы">
+                <img class="scr scr--img scr--b" src="../assets/img/plataforma/mapa-nodos.webp" alt="Реальная карта узлов адаптаций группы" loading="lazy" width="1420" height="832">
+              </button>
+              <span class="pcard__tag">Реальный скриншот</span>
             </div>
             <div class="pcard__body">
               <h3>Анализ узлов</h3>
@@ -415,6 +440,6 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js?v=5"></script>
+  <script src="../assets/js/main.js?v=8"></script>
 </body>
 </html>
