@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=8">
+  <link rel="stylesheet" href="assets/css/styles.css?v=11">
 </head>
 <body>
 
@@ -38,7 +38,11 @@
   <main id="inicio">
 
     <!-- ============ 1 · HERO ============ -->
-    <section class="hero">
+    <section class="hero hero--video">
+      <div class="hero__bg" aria-hidden="true">
+        <video class="hero__video" muted loop playsinline preload="none" poster="assets/video/hero-campo.webp"
+               data-src="assets/video/hero-campo.mp4" data-src-webm="assets/video/hero-campo.webm"></video>
+      </div>
       <div class="container hero__grid">
         <div class="hero__text">
           <p class="eyebrow">Ciencia del deporte e IA propia para el desarrollo del talento</p>
@@ -203,14 +207,20 @@
           <figure class="field__item">
             <video autoplay muted loop playsinline preload="metadata" poster="assets/video/sprint-fotocelulas.webp" aria-label="Sprint con fotocélulas">
               <source src="assets/video/sprint-fotocelulas.mp4" type="video/mp4">
+              <source src="assets/video/sprint-fotocelulas.webm" type="video/webm">
             </video>
             <figcaption>Sprint con fotocélulas</figcaption>
           </figure>
           <figure class="field__item">
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/video/salida-conos.webp" aria-label="Aceleración y salidas">
-              <source src="assets/video/salida-conos.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/video/cambio-direccion.webp" aria-label="Cambio de dirección">
+              <source src="assets/video/cambio-direccion.mp4" type="video/mp4">
+              <source src="assets/video/cambio-direccion.webm" type="video/webm">
             </video>
-            <figcaption>Aceleración y salidas</figcaption>
+            <figcaption>Cambio de dirección</figcaption>
+          </figure>
+          <figure class="field__item">
+            <img src="assets/img/plataforma/cmj-plataforma.webp" alt="Salto CMJ en plataforma de fuerza" loading="lazy" width="1400" height="788">
+            <figcaption>Salto CMJ en plataforma de fuerza</figcaption>
           </figure>
           <figure class="field__item field__item--chart">
             <button class="zoomable" type="button" data-full="assets/img/plataforma/distribucion-grupo.webp" aria-label="Ver ampliada: Gráfico real: distribución del grupo en dos evaluaciones">
@@ -439,6 +449,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/main.js?v=10"></script>
 </body>
 </html>
