@@ -93,7 +93,7 @@ p { margin: 0 0 1em; }
 .nav__toggle span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 88px 0 72px; background: linear-gradient(180deg, var(--tint), var(--white)); }
+.hero { padding: 96px 0 88px; background: linear-gradient(180deg, var(--tint), var(--white)); }
 .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
 .hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 800; letter-spacing: -.01em; }
 .lead { font-size: 19px; color: var(--muted); max-width: 560px; }
@@ -434,10 +434,10 @@ html[lang="ru"] .mock__tabs button { font-size: 11px; }
     #0E1A25;
 }
 .field__lead { color: #9FB3C8; font-size: 17px; max-width: 760px; margin-bottom: 32px; }
-.field__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.field__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .field__item { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 10;
   background: #15232F; border: 1px solid rgba(255,255,255,.08); }
-.field__item video { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.9); }
+.field__item video, .field__item > img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.9); }
 .field__item::after { content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(0deg, rgba(14,26,37,.85), rgba(14,26,37,0) 55%); }
 .field__item figcaption { position: absolute; left: 18px; right: 18px; bottom: 14px; z-index: 1;
@@ -474,12 +474,33 @@ html[lang="ru"] .mock__tabs button { font-size: 11px; }
   border: 0; background: rgba(255,255,255,.12); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
 .lightbox__close:focus-visible { outline: 2px solid var(--teal); }
 
+
+/* ---------- Hero con vídeo de campo de fondo ---------- */
+.hero--video { position: relative; overflow: hidden; background: #0E1A25; isolation: isolate; }
+.hero__bg { position: absolute; inset: 0; z-index: -1;
+  background: #0E1A25 url("../video/hero-campo.webp") center / cover no-repeat; }
+.hero__video { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 1.2s ease; }
+.hero__video.is-ready { opacity: 1; }
+/* Capa de color de marca: oscurece a la izquierda (texto) y deja ver el vídeo a la derecha */
+.hero__bg::after { content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(14,26,37,.94) 0%, rgba(14,26,37,.82) 42%, rgba(14,26,37,.55) 100%),
+    linear-gradient(180deg, rgba(32,178,162,.10), rgba(47,111,214,.10)); }
+.hero--video .eyebrow { color: #5FD3C6; }
+.hero--video h1 { color: #FFFFFF; }
+.hero--video .lead { color: #C9D6E2; }
+.hero--video .btn { background: var(--grad); border-color: transparent; color: #0E1A25; }
+.hero--video .btn:hover { filter: brightness(1.06); }
+.hero--video .btn--ghost { background: transparent; color: #FFFFFF; border-color: rgba(255,255,255,.55); }
+.hero--video .btn--ghost:hover { background: rgba(255,255,255,.08); }
+.hero--video .mock { box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+@media (prefers-reduced-motion: reduce) { .hero__video { display: none; } }
+
 /* ---------- Móvil y tablet ---------- */
 @media (max-width: 960px) {
   .hero__grid, .split { grid-template-columns: 1fr; }
   .cards, .features, .showcase, .platform { grid-template-columns: 1fr 1fr; }
   .field__grid { grid-template-columns: 1fr 1fr; }
-  .field__item--chart { grid-column: 1 / -1; aspect-ratio: 21 / 9; }
   .tech { grid-template-columns: 1fr; }
   .decision__inner { flex-direction: column; align-items: flex-start; }
 }
@@ -514,4 +535,12 @@ html[lang="ru"] .mock__tabs button { font-size: 11px; }
   .stack li strong { white-space: normal; }
   .mock__tabs button { font-size: 10.5px; padding: 7px 2px; }
   .mock { min-height: 600px; }
+}
+
+/* Móvil pequeño: que el logo y el selector de idioma no se toquen */
+@media (max-width: 420px) {
+  .brand__name { font-size: 17px; }
+  .brand__symbol { width: 28px; height: 28px; }
+  .lang { margin-right: 4px; }
+  .lang a { padding: 5px 7px; font-size: 11px; }
 }
