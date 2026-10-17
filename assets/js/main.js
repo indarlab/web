@@ -36,3 +36,43 @@ function activate(tab) {
     document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
   });
 }
+
+// Visor de capturas reales (clic para ampliar)
+const zoomables = document.querySelectorAll('.zoomable');
+if (zoomables.length) {
+  const txtCerrar = { es: 'Cerrar', en: 'Close', eu: 'Itxi', ru: 'Закрыть' }[document.documentElement.lang] || 'Cerrar';
+  const box = document.createElement('div');
+  box.className = 'lightbox';
+  box.hidden = true;
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-modal', 'true');
+  box.innerHTML = '<button class="lightbox__close" type="button">×</button><img alt="">';
+  document.body.appendChild(box);
+  const img = box.querySelector('img');
+  const btnClose = box.querySelector('button');
+  btnClose.setAttribute('aria-label', txtCerrar);
+  let origen = null;
+  const cerrar = () => { box.hidden = true; img.removeAttribute('src'); if (origen) origen.focus(); };
+  zoomables.forEach(b => b.addEventListener('click', () => {
+    origen = b;
+    img.src = b.dataset.full;
+    img.alt = (b.querySelector('img') || {}).alt || '';
+    box.hidden = false;
+    btnClose.focus();
+  }));
+  box.addEventListener('click', e => { if (e.target !== img) cerrar(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) cerrar(); });
+}
+
+// Vídeos de campo: se pausan fuera de pantalla y respetan "reducir movimiento"
+const videos = document.querySelectorAll('.field video');
+const reducir = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+videos.forEach(v => {
+  if (reducir) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
+});
+if (!reducir && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entradas => entradas.forEach(e => {
+    if (e.isIntersecting) { e.target.play().catch(() => {}); } else { e.target.pause(); }
+  }), { threshold: 0.2 });
+  videos.forEach(v => io.observe(v));
+}
